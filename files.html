@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resources | Uzbek Pro Academy</title>
+
+<meta name="description" content="Free and premium Uzbek learning resources including vocabulary lists, worksheets, audio practice and downloadable materials.">
+
+<style>
+
+:root{
+  --blue:#0066B3;
+  --blue-dark:#004B82;
+  --green:#1EB53A;
+  --red:#CE1126;
+  --navy:#0B1724;
+  --text:#17212B;
+  --muted:#66727E;
+  --bg:#F5F8FB;
+  --white:#FFFFFF;
+  --border:#E2E8EE;
+  --max:1180px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+
+/* TOP BAR */
+
+.topbar{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:13px;
+}
+
+
+/* NAVIGATION */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-size:19px;
+  font-weight:850;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:19px;
+  font-size:13px;
+  font-weight:750;
+}
+
+.nav-links a{
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.nav-button{
+  background:var(--blue);
+  color:#fff!important;
+  padding:11px 18px;
+  border-radius:999px;
+}
+
+
+/* HERO */
+
+.hero{
+  background:#fff;
+  padding:90px 0 80px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-block;
+  background:#EEF7FD;
+  border:1px solid #D9EAF5;
+  color:var(--blue-dark);
+  padding:8px 15px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:850;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(48px,7vw,75px);
+  line-height:.98;
+  letter-spacing:-4px;
+  color:var(--navy);
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:var(--muted);
+  font-size:18px;
+}
+
+
+/* QUICK NAV */
+
+.resource-nav{
+  padding:45px 0 15px;
+}
+
+.resource-nav-inner{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.filter{
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--text);
+  padding:10px 17px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.filter.active{
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+}
+
+
+/* RESOURCES */
+
+.resources{
+  padding:30px 0 90px;
+}
+
+.section-heading{
+  margin-bottom:35px;
+}
+
+.label{
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:850;
+  margin-bottom:10px;
+}
+
+.section-heading h2{
+  font-size:40px;
+  line-height:1.05;
+  letter-spacing:-2px;
+}
+
+.resource-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.resource-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:28px;
+  position:relative;
+  transition:.25s;
+  overflow:hidden;
+}
+
+.resource-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 50px rgba(10,35,60,.09);
+}
+
+.resource-icon{
+  width:58px;
+  height:58px;
+  border-radius:17px;
+  background:#EEF7FD;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:29px;
+  margin-bottom:20px;
+}
+
+.resource-card h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.resource-card p{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:22px;
+}
+
+.resource-meta{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.tag{
+  background:#F2F5F7;
+  color:#56636E;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+.resource-button{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:11px 17px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:850;
+}
+
+.resource-button.secondary{
+  background:#F0F4F7;
+  color:var(--text);
+}
+
+
+/* FEATURED RESOURCE */
+
+.featured{
+  background:var(--navy);
+  color:#fff;
+  border-radius:30px;
+  padding:42px;
+  margin-bottom:55px;
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  align-items:center;
+  gap:40px;
+  overflow:hidden;
+  position:relative;
+}
+
+.featured:after{
+  content:"🇺🇿";
+  position:absolute;
+  right:-15px;
+  top:-45px;
+  font-size:180px;
+  opacity:.08;
+}
+
+.featured-label{
+  color:#75B9E8;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.featured h2{
+  font-size:35px;
+  line-height:1.08;
+  letter-spacing:-1.5px;
+  margin-bottom:12px;
+}
+
+.featured p{
+  color:#AEBBC5;
+  font-size:13px;
+  max-width:620px;
+}
+
+.featured-button{
+  display:inline-block;
+  margin-top:23px;
+  background:#fff;
+  color:var(--navy);
+  padding:13px 20px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:850;
+}
+
+.featured-side{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:center;
+}
+
+.pdf-box{
+  width:170px;
+  height:190px;
+  background:#fff;
+  color:var(--navy);
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.pdf-box .pdf-icon{
+  font-size:50px;
+}
+
+.pdf-box strong{
+  font-size:12px;
+  margin-top:8px;
+}
+
+.pdf-box span{
+  font-size:9px;
+  color:var(--muted);
+}
+
+
+/* CATEGORIES */
+
+.categories{
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:90px 0;
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.category{
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:25px;
+  background:#FAFCFD;
+}
+
+.category-icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.category h3{
+  font-size:17px;
+  margin-bottom:6px;
+}
+
+.category p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* NOTICE */
+
+.notice{
+  margin-top:40px;
+  background:#F0F7FC;
+  border:1px solid #D9EAF5;
+  border-radius:20px;
+  padding:20px 23px;
+  color:#39586F;
+  font-size:12px;
+}
+
+.notice strong{
+  color:var(--blue-dark);
+}
+
+
+/* CTA */
+
+.cta{
+  padding:95px 0;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:45px;
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin-bottom:17px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+.cta-button{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:850;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#0B1118;
+  color:#fff;
+  padding:60px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr .8fr;
+  gap:45px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer h4{
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+footer p,
+footer a{
+  color:#96A3AE;
+  font-size:13px;
+}
+
+footer a{
+  display:block;
+  margin-bottom:9px;
+}
+
+footer a:hover{
+  color:#fff;
+}
+
+.copyright{
+  text-align:center;
+  color:#65717C;
+  padding-top:25px;
+  font-size:12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .nav-links a:not(.nav-button){
+    display:none;
+  }
+
+  .featured{
+    grid-template-columns:1fr;
+  }
+
+  .resource-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .category-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:65px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-3px;
+  }
+
+  .resource-grid{
+    grid-template-columns:1fr;
+  }
+
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+
+  .featured{
+    padding:30px;
+  }
+
+  .featured h2{
+    font-size:29px;
+  }
+
+  .section-heading h2{
+    font-size:33px;
+  }
+
+  .cta h2{
+    font-size:37px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="topbar">
+🇺🇿 Learn Uzbek • Download • Practice • Speak
+</div>
+
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+🇺🇿 Uzbek Pro <span>Academy</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="bookings.html">Bookings</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="blog.html">Blog</a>
+<a href="videos.html">Videos</a>
+<a href="events.html">Events</a>
+<a href="about.html">About</a>
+
+<a href="contact.html" class="nav-button">
+Contact
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+📥 Uzbek Pro Academy Resources
+</div>
+
+<h1>
+Learn more.<br>
+<span>Practice anywhere.</span>
+</h1>
+
+<p>
+Downloadable Uzbek learning materials designed to help
+you review vocabulary, practice speaking, improve pronunciation
+and continue learning outside your lessons.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUICK NAV -->
+
+<section class="resource-nav">
+
+<div class="container">
+
+<div class="resource-nav-inner">
+
+<a href="#free" class="filter active">
+Free Resources
+</a>
+
+<a href="#vocabulary" class="filter">
+Vocabulary
+</a>
+
+<a href="#worksheets" class="filter">
+Worksheets
+</a>
+
+<a href="#audio" class="filter">
+Audio
+</a>
+
+<a href="#premium" class="filter">
+Premium
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section class="resources" id="free">
+
+<div class="container">
+
+
+<!-- FEATURED -->
+
+<div class="featured">
+
+<div>
+
+<div class="featured-label">
+Featured Resource
+</div>
+
+<h2>
+100 Essential Uzbek Words
+</h2>
+
+<p>
+Start building your Uzbek vocabulary with a practical
+collection of common words for everyday communication.
+More resources will be added regularly.
+</p>
+
+<a href="contact.html" class="featured-button">
+Get the Resource →
+</a>
+
+</div>
+
+
+<div class="featured-side">
+
+<div class="pdf-box">
+
+<div class="pdf-icon">
+📄
+</div>
+
+<strong>
+UZBEK WORDS
+</strong>
+
+<span>
+PDF RESOURCE
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section-heading">
+
+<div class="label">
+Learning library
+</div>
+
+<h2>
+Explore resources.
+</h2>
+
+</div>
+
+
+<div class="resource-grid" id="vocabulary">
+
+
+<!-- RESOURCE 1 -->
+
+<div class="resource-card">
+
+<div class="resource-icon">
+📚
+</div>
+
+<h3>
+Essential Uzbek Vocabulary
+</h3>
+
+<p>
+Useful everyday Uzbek words for beginners.
+</p>
+
+<div class="resource-meta">
+
+<span class="tag">Beginner</span>
+<span class="tag">PDF</span>
+<span class="tag">Vocabulary</span>
+
+</div>
+
+<a href="contact.html" class="resource-button">
+Coming Soon →
+</a>
+
+</div>
+
+
+<!-- RESOURCE 2 -->
+
+<div class="resource-card">
+
+<div class="resource-icon">
+🗣️
+</div>
+
+<h3>
+Everyday Uzbek Phrases
+</h3>
+
+<p>
+Common phrases for greetings, conversations,
+shopping and daily situations.
+</p>
+
+<div class="resource-meta">
+
+<span class="tag">Speaking</span>
+<span class="tag">PDF</span>
+
+</div>
+
+<a href="contact.html" class="resource-button">
+Coming Soon →
+</a>
+
+</div>
+
+
+<!-- RESOURCE 3 -->
+
+<div class="resource-card" id="worksheets">
+
+<div class="resource-icon">
+📝
+</div>
+
+<h3>
+Beginner Practice Worksheets
+</h3>
+
+<p>
+Simple exercises for vocabulary, sentence building
+and basic Uzbek grammar.
+</p>
+
+<div class="resource-meta">
+
+<span class="tag">Beginner</span>
+<span class="tag">Practice</span>
+
+</div>
+
+<a href="contact.html" class="resource-button">
+Coming Soon →
+</a>
+
+</div>
+
+
+<!-- RESOURCE 4 -->
+
+<div class="resource-card">
+
+<div class="resource-icon">
+🔊
+</div>
+
+<h3>
+Pronunciation Practice
+</h3>
+
+<p>
+Practice Uzbek sounds, pronunciation and useful
+words with audio-based exercises.
+</p>
+
+<div class="resource-meta">
+
+<span class="tag">Audio</span>
+<span class="tag">Speaking</span>
+
+</div>
+
+<a href="contact.html" class="resource-button">
+Coming Soon →
+</a>
+
+</div>
+
+
+<!-- RESOURCE 5 -->
+
+<div class="resource-card" id="audio">
+
+<div class="resource-icon">
+🎧
+</div>
+
+<h3>
+Listening Practice
+</h3>
+
+<p>
+Short listening materials designed for learners
+who want to understand spoken Uzbek.
+</p>
+
+<div class="resource-meta">
+
+<span class="tag">Listening</span>
+<span class="tag">Audio</span>
+
+</div>
+
+<a href="contact.html" class="resource-button">
+Coming Soon →
+</a>
+
+</div>
+
+
+<!-- RESOURCE 6 -->
+
+<div class="resource-card" id="premium">
+
+<div class="resource-icon">
+🎁
+</div>
+
+<h3>
+Premium Learning Packs
+</h3>
+
+<p>
+Structured vocabulary and practice materials for
+students who want a deeper learning experience.
+</p>
+
+<div class="resource-meta">
+
+<span class="tag">Premium</span>
+<span class="tag">Advanced</span>
+
+</div>
+
+<a href="store.html" class="resource-button">
+Explore Store →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+<strong>📌 Note:</strong>
+This library will grow over time. New PDFs, audio exercises,
+vocabulary packs and practice materials will be added as
+Uzbek Pro Academy develops.
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+Resource categories
+</div>
+
+<h2>
+Choose how you want to practice.
+</h2>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="category">
+
+<div class="category-icon">
+📖
+</div>
+
+<h3>
+Read
+</h3>
+
+<p>
+Vocabulary lists, grammar notes and printable materials.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🎧
+</div>
+
+<h3>
+Listen
+</h3>
+
+<p>
+Audio practice for pronunciation and comprehension.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+✍️
+</div>
+
+<h3>
+Practice
+</h3>
+
+<p>
+Worksheets and exercises to reinforce your learning.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🗣️
+</div>
+
+<h3>
+Speak
+</h3>
+
+<p>
+Conversation resources designed to get you using Uzbek.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Want a personalized learning plan?
+</h2>
+
+<p>
+Resources are useful. A 1-on-1 lesson makes them personal.
+</p>
+
+<a href="bookings.html" class="cta-button">
+Book a 1-on-1 Lesson →
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+🇺🇿 Uzbek Pro Academy
+</h3>
+
+<p>
+Practical Uzbek lessons and resources for
+English-speaking learners.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Learn</h4>
+
+<a href="bookings.html">1-on-1 Lessons</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="videos.html">Videos</a>
+
+</div>
+
+
+<div>
+
+<h4>Explore</h4>
+
+<a href="blog.html">Learning Hub</a>
+<a href="events.html">Events</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="files.html">Resources</a>
+
+</div>
+
+
+<div>
+
+<h4>Connect</h4>
+
+<a href="about.html">About</a>
+<a href="instagram.html">Instagram</a>
+<a href="chat.html">Chat</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+© 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
