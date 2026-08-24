@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Videos | Uzbek Pro Academy</title>
+
+<meta name="description" content="Learn Uzbek through short, practical and conversational videos with Odina. Vocabulary, pronunciation, phrases, culture and everyday Uzbek.">
+
+<style>
+
+:root{
+  --blue:#0066B3;
+  --blue-dark:#004B82;
+  --green:#1EB53A;
+  --red:#CE1126;
+  --navy:#091724;
+  --text:#17212B;
+  --muted:#66727E;
+  --bg:#F5F8FB;
+  --white:#FFFFFF;
+  --border:#E1E8EE;
+  --shadow:0 18px 55px rgba(8,30,50,.09);
+  --max:1180px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:12px;
+  font-weight:650;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-size:19px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.nav-links a{
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.nav-button{
+  background:var(--blue);
+  color:#fff!important;
+  padding:11px 18px;
+  border-radius:999px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background:#fff;
+  padding:85px 0 65px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:#EEF7FD;
+  border:1px solid #D8EAF5;
+  color:var(--blue-dark);
+  padding:8px 15px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(48px,7vw,78px);
+  line-height:.95;
+  letter-spacing:-4px;
+  color:var(--navy);
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:var(--muted);
+  font-size:17px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.video-tools{
+  margin-top:-1px;
+  background:#fff;
+  padding-bottom:35px;
+}
+
+.tools{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.search{
+  flex:1;
+  min-width:260px;
+  position:relative;
+}
+
+.search input{
+  width:100%;
+  border:1px solid var(--border);
+  background:#F8FAFC;
+  border-radius:999px;
+  padding:14px 20px 14px 45px;
+  outline:none;
+  font-size:12px;
+}
+
+.search input:focus{
+  border-color:var(--blue);
+  background:#fff;
+}
+
+.search-icon{
+  position:absolute;
+  left:17px;
+  top:11px;
+  font-size:17px;
+}
+
+.categories{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.category{
+  border:1px solid var(--border);
+  background:#fff;
+  color:#46535F;
+  padding:10px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:10px;
+  font-weight:850;
+}
+
+.category.active,
+.category:hover{
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+}
+
+
+/* =========================
+   VIDEO SECTION
+========================= */
+
+.videos{
+  padding:65px 0 100px;
+}
+
+.section-heading{
+  margin-bottom:32px;
+}
+
+.label{
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+  font-weight:900;
+  margin-bottom:9px;
+}
+
+.section-heading h2{
+  font-size:40px;
+  line-height:1.05;
+  letter-spacing:-2px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  margin-top:9px;
+  max-width:650px;
+  font-size:13px;
+}
+
+
+/* VIDEO GRID */
+
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.video-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:24px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.video-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+
+/* THUMBNAIL */
+
+.thumbnail{
+  height:210px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.video-card:nth-child(1) .thumbnail{
+  background:linear-gradient(135deg,#0066B3,#54A8D9);
+}
+
+.video-card:nth-child(2) .thumbnail{
+  background:linear-gradient(135deg,#1EB53A,#72D38A);
+}
+
+.video-card:nth-child(3) .thumbnail{
+  background:linear-gradient(135deg,#CE1126,#EC6472);
+}
+
+.video-card:nth-child(4) .thumbnail{
+  background:linear-gradient(135deg,#004B82,#0085CF);
+}
+
+.video-card:nth-child(5) .thumbnail{
+  background:linear-gradient(135deg,#188D38,#61C979);
+}
+
+.video-card:nth-child(6) .thumbnail{
+  background:linear-gradient(135deg,#A50F22,#DC3E50);
+}
+
+.video-card:nth-child(7) .thumbnail{
+  background:linear-gradient(135deg,#0C334D,#0066B3);
+}
+
+.video-card:nth-child(8) .thumbnail{
+  background:linear-gradient(135deg,#14662A,#1EB53A);
+}
+
+.video-card:nth-child(9) .thumbnail{
+  background:linear-gradient(135deg,#741020,#CE1126);
+}
+
+.thumbnail::after{
+  content:"🇺🇿";
+  position:absolute;
+  right:-20px;
+  bottom:-45px;
+  font-size:150px;
+  opacity:.08;
+}
+
+.play{
+  width:62px;
+  height:62px;
+  background:rgba(255,255,255,.96);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-left:4px;
+  color:var(--blue);
+  font-size:23px;
+  box-shadow:0 12px 30px rgba(0,0,0,.16);
+  position:relative;
+  z-index:2;
+  transition:.2s;
+}
+
+.video-card:hover .play{
+  transform:scale(1.1);
+}
+
+.duration{
+  position:absolute;
+  right:13px;
+  bottom:12px;
+  background:rgba(0,0,0,.78);
+  color:#fff;
+  padding:4px 7px;
+  border-radius:6px;
+  font-size:9px;
+  font-weight:800;
+  z-index:3;
+}
+
+.video-tag{
+  position:absolute;
+  left:13px;
+  top:13px;
+  background:#fff;
+  color:var(--navy);
+  padding:6px 9px;
+  border-radius:999px;
+  font-size:8px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  z-index:3;
+}
+
+
+/* VIDEO CONTENT */
+
+.video-content{
+  padding:21px;
+}
+
+.video-category{
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  font-size:9px;
+  font-weight:900;
+  margin-bottom:7px;
+}
+
+.video-content h3{
+  font-size:18px;
+  line-height:1.25;
+  margin-bottom:8px;
+}
+
+.video-content p{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:17px;
+}
+
+.video-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.watch{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+}
+
+.video-meta{
+  color:#89949E;
+  font-size:9px;
+}
+
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured{
+  margin:70px 0 0;
+  background:var(--navy);
+  border-radius:30px;
+  padding:45px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  align-items:center;
+  color:#fff;
+  overflow:hidden;
+  position:relative;
+}
+
+.featured::after{
+  content:"🇺🇿";
+  position:absolute;
+  right:-25px;
+  top:-70px;
+  font-size:230px;
+  opacity:.06;
+}
+
+.featured-label{
+  color:#72B6E4;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.featured h2{
+  font-size:36px;
+  line-height:1.08;
+  letter-spacing:-1.5px;
+  margin-bottom:12px;
+}
+
+.featured p{
+  color:#AAB8C3;
+  font-size:13px;
+  max-width:570px;
+}
+
+.youtube-button{
+  display:inline-block;
+  margin-top:22px;
+  background:#fff;
+  color:var(--navy);
+  padding:13px 21px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+}
+
+.channel-card{
+  position:relative;
+  z-index:2;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:23px;
+  padding:30px;
+  text-align:center;
+}
+
+.channel-icon{
+  font-size:54px;
+  margin-bottom:8px;
+}
+
+.channel-card strong{
+  display:block;
+  font-size:18px;
+}
+
+.channel-card span{
+  color:#9CAAB5;
+  font-size:11px;
+}
+
+
+/* =========================
+   LEARN WITH VIDEOS
+========================= */
+
+.learn{
+  background:#fff;
+  padding:90px 0;
+  margin-top:90px;
+}
+
+.learn-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.learn-card{
+  border:1px solid var(--border);
+  background:#FAFCFD;
+  border-radius:21px;
+  padding:25px;
+}
+
+.learn-icon{
+  font-size:29px;
+  margin-bottom:13px;
+}
+
+.learn-card h3{
+  font-size:17px;
+  margin-bottom:7px;
+}
+
+.learn-card p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+  padding:95px 0;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:45px;
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin-bottom:17px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+.cta-button{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:850;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#0B1118;
+  color:#fff;
+  padding:60px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr .8fr;
+  gap:45px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer h4{
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+footer p,
+footer a{
+  color:#96A3AE;
+  font-size:13px;
+}
+
+footer a{
+  display:block;
+  margin-bottom:9px;
+}
+
+footer a:hover{
+  color:#fff;
+}
+
+.copyright{
+  text-align:center;
+  color:#65717C;
+  padding-top:25px;
+  font-size:12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:950px){
+
+  .nav-links a:not(.nav-button){
+    display:none;
+  }
+
+  .video-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .learn-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .featured{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:620px){
+
+  .hero{
+    padding:65px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-3px;
+  }
+
+  .tools{
+    align-items:stretch;
+  }
+
+  .categories{
+    justify-content:center;
+  }
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .learn-grid{
+    grid-template-columns:1fr;
+  }
+
+  .featured{
+    padding:30px;
+  }
+
+  .featured h2{
+    font-size:29px;
+  }
+
+  .section-heading h2{
+    font-size:33px;
+  }
+
+  .cta h2{
+    font-size:37px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+🇺🇿 Learn Uzbek • Short lessons • Real conversations • New videos
+</div>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+🇺🇿 Uzbek Pro <span>Academy</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="bookings.html">Bookings</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="blog.html">Blog</a>
+<a href="videos.html">Videos</a>
+<a href="events.html">Events</a>
+<a href="about.html">About</a>
+
+<a href="contact.html" class="nav-button">
+Contact
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+🎥 Uzbek Pro Academy Video Library
+</div>
+
+<h1>
+Learn Uzbek.<br>
+<span>One video at a time.</span>
+</h1>
+
+<p>
+Short, practical Uzbek lessons for English-speaking learners.
+Learn useful words, everyday phrases, pronunciation, culture
+and real conversational Uzbek.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SEARCH & FILTER -->
+
+<section class="video-tools">
+
+<div class="container">
+
+<div class="tools">
+
+<div class="search">
+
+<div class="search-icon">🔎</div>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Uzbek lessons, words, phrases..."
+>
+
+</div>
+
+
+<div class="categories">
+
+<button class="category active" data-filter="all">
+All
+</button>
+
+<button class="category" data-filter="beginner">
+Beginner
+</button>
+
+<button class="category" data-filter="vocabulary">
+Vocabulary
+</button>
+
+<button class="category" data-filter="speaking">
+Speaking
+</button>
+
+<button class="category" data-filter="pronunciation">
+Pronunciation
+</button>
+
+<button class="category" data-filter="culture">
+Culture
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VIDEOS -->
+
+<section class="videos">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+Video lessons
+</div>
+
+<h2>
+Learn something useful today.
+</h2>
+
+<p>
+Start with a short lesson and gradually build your Uzbek
+through vocabulary, phrases and real conversation.
+</p>
+
+</div>
+
+
+<div class="video-grid" id="videoGrid">
+
+
+<!-- VIDEO 1 -->
+
+<article class="video-card" data-category="beginner vocabulary">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Beginner
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+01:05
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Beginner Uzbek
+</div>
+
+<h3>
+5 Uzbek Words Every Beginner Should Know
+</h3>
+
+<p>
+Start your Uzbek journey with five simple and useful words.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+New
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 2 -->
+
+<article class="video-card" data-category="vocabulary">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Vocabulary
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+00:48
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Vocabulary
+</div>
+
+<h3>
+How to Say Hello in Uzbek
+</h3>
+
+<p>
+Learn natural Uzbek greetings you can actually use.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+Beginner
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 3 -->
+
+<article class="video-card" data-category="speaking">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Speaking
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+01:22
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Speaking
+</div>
+
+<h3>
+Introduce Yourself in Uzbek
+</h3>
+
+<p>
+Learn a simple conversation for introducing yourself.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+A1
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 4 -->
+
+<article class="video-card" data-category="pronunciation">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Pronunciation
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+01:10
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Pronunciation
+</div>
+
+<h3>
+Uzbek Sounds English Speakers Need
+</h3>
+
+<p>
+A quick guide to sounds that may be unfamiliar to English speakers.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+Practice
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 5 -->
+
+<article class="video-card" data-category="vocabulary">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Vocabulary
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+00:55
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Everyday Uzbek
+</div>
+
+<h3>
+10 Uzbek Words for Daily Life
+</h3>
+
+<p>
+Useful words you can start using today.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+A1
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 6 -->
+
+<article class="video-card" data-category="culture">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Culture
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+01:35
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Language & Culture
+</div>
+
+<h3>
+Uzbek Expressions You Should Know
+</h3>
+
+<p>
+Discover expressions that reveal more about Uzbek culture.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+Culture
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 7 -->
+
+<article class="video-card" data-category="speaking">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Conversation
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+01:15
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Conversation
+</div>
+
+<h3>
+A Simple Uzbek Conversation
+</h3>
+
+<p>
+Listen and repeat a practical everyday conversation.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+A1–A2
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 8 -->
+
+<article class="video-card" data-category="vocabulary">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Vocabulary
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+00:59
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Useful Words
+</div>
+
+<h3>
+Uzbek Words for Food
+</h3>
+
+<p>
+Learn common food vocabulary before your next Uzbek meal.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+Travel
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- VIDEO 9 -->
+
+<article class="video-card" data-category="culture speaking">
+
+<div class="thumbnail">
+
+<div class="video-tag">
+Culture
+</div>
+
+<div class="play">▶</div>
+
+<div class="duration">
+01:40
+</div>
+
+</div>
+
+<div class="video-content">
+
+<div class="video-category">
+Uzbek Culture
+</div>
+
+<h3>
+What Does “Mehmon” Mean?
+</h3>
+
+<p>
+Learn a beautiful Uzbek cultural concept through language.
+</p>
+
+<div class="video-footer">
+
+<a href="#" class="watch" onclick="openVideo(event,'YOUR_YOUTUBE_VIDEO_URL')">
+Watch lesson →
+</a>
+
+<span class="video-meta">
+Culture
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+<!-- FEATURED CHANNEL -->
+
+<div class="featured">
+
+<div>
+
+<div class="featured-label">
+Follow the academy
+</div>
+
+<h2>
+Learn Uzbek with Odina.
+</h2>
+
+<p>
+Follow Uzbek Pro Academy for short Uzbek lessons, vocabulary,
+pronunciation tips, everyday phrases and practical language content.
+</p>
+
+<a
+href="https://www.youtube.com/@UzbekProAcademy"
+target="_blank"
+class="youtube-button"
+>
+Visit YouTube Channel →
+</a>
+
+</div>
+
+
+<div class="channel-card">
+
+<div class="channel-icon">
+▶️
+</div>
+
+<strong>
+Uzbek Pro Academy
+</strong>
+
+<span>
+Practical Uzbek for English speakers
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- HOW TO LEARN -->
+
+<section class="learn">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+Learn smarter
+</div>
+
+<h2>
+Turn videos into progress.
+</h2>
+
+</div>
+
+
+<div class="learn-grid">
+
+
+<div class="learn-card">
+
+<div class="learn-icon">
+👀
+</div>
+
+<h3>
+Watch
+</h3>
+
+<p>
+Watch the lesson once to understand the meaning and context.
+</p>
+
+</div>
+
+
+<div class="learn-card">
+
+<div class="learn-icon">
+🔁
+</div>
+
+<h3>
+Repeat
+</h3>
+
+<p>
+Replay important phrases and repeat them aloud.
+</p>
+
+</div>
+
+
+<div class="learn-card">
+
+<div class="learn-icon">
+🗣️
+</div>
+
+<h3>
+Speak
+</h3>
+
+<p>
+Try using the new Uzbek words in your own sentences.
+</p>
+
+</div>
+
+
+<div class="learn-card">
+
+<div class="learn-icon">
+🚀
+</div>
+
+<h3>
+Use it
+</h3>
+
+<p>
+Take what you learned into a real conversation.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Ready to speak Uzbek?
+</h2>
+
+<p>
+Videos are a great start. Get personalized practice with Odina.
+</p>
+
+<a href="bookings.html" class="cta-button">
+Book a 1-on-1 Lesson →
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+🇺🇿 Uzbek Pro Academy
+</h3>
+
+<p>
+Practical Uzbek lessons and resources for
+English-speaking learners.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Learn</h4>
+
+<a href="bookings.html">1-on-1 Lessons</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="videos.html">Videos</a>
+
+</div>
+
+
+<div>
+
+<h4>Explore</h4>
+
+<a href="blog.html">Blog</a>
+<a href="events.html">Events</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="files.html">Resources</a>
+
+</div>
+
+
+<div>
+
+<h4>Connect</h4>
+
+<a href="about.html">About</a>
+<a href="instagram.html">Instagram</a>
+<a href="chat.html">Chat</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+© 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- VIDEO / SEARCH SCRIPT -->
+
+<script>
+
+const searchInput =
+document.getElementById("searchInput");
+
+const cards =
+document.querySelectorAll(".video-card");
+
+const buttons =
+document.querySelectorAll(".category");
+
+let activeFilter = "all";
+
+
+function filterVideos(){
+
+  const query =
+  searchInput.value.toLowerCase().trim();
+
+  cards.forEach(card => {
+
+    const text =
+    card.innerText.toLowerCase();
+
+    const categories =
+    card.dataset.category;
+
+    const matchesSearch =
+    text.includes(query);
+
+    const matchesFilter =
+    activeFilter === "all" ||
+    categories.includes(activeFilter);
+
+    card.style.display =
+    matchesSearch && matchesFilter
+    ? ""
+    : "none";
+
+  });
+
+}
+
+
+searchInput.addEventListener(
+"input",
+filterVideos
+);
+
+
+buttons.forEach(button => {
+
+  button.addEventListener("click",function(){
+
+    buttons.forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    this.classList.add("active");
+
+    activeFilter =
+    this.dataset.filter;
+
+    filterVideos();
+
+  });
+
+});
+
+
+function openVideo(event,url){
+
+  event.preventDefault();
+
+  if(
+    !url ||
+    url === "YOUR_YOUTUBE_VIDEO_URL"
+  ){
+
+    alert(
+      "This video will be added soon. Replace YOUR_YOUTUBE_VIDEO_URL with your YouTube video link."
+    );
+
+    return;
+
+  }
+
+  window.open(
+    url,
+    "_blank"
+  );
+
+}
+
+</script>
+
+
+</body>
+  </html>
