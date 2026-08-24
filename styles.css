@@ -1,0 +1,92 @@
+align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--soft);
+
+    color:var(--primary);
+
+    font-size:20px;
+  }
+
+  .hero{
+    padding:60px 0;
+  }
+
+  .hero h1{
+    font-size:46px;
+    letter-spacing:-2.5px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .grid-2,
+  .grid-3,
+  .pricing-grid{
+    grid-template-columns:1fr;
+  }
+
+  .grid-4{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .social-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cta{
+    padding:55px 25px;
+    border-radius:24px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+
+}
+
+
+@media(max-width:480px){
+
+  .container{
+    width:90%;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .grid-4,
+  .social-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .card{
+    padding:23px;
+  }
+
+  .cta h2{
+    letter-spacing:-2px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+}
