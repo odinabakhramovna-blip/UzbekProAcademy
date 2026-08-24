@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Uzbek Pro Academy | Learn Uzbek with Odina</title>
+  <meta name="description" content="Learn practical, everyday Uzbek with personalized 1-on-1 lessons with Odina.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #17202a;
+      background: #fffdf8;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 7%;
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #17202a;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 90px 7%;
+      text-align: center;
+      background: #f5f1e8;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      font-size: 19px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 28px;
+      background: #17202a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 75px 7%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 45px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #eee;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .about {
+      background: #17202a;
+      color: white;
+      max-width: none;
+    }
+
+    .about-inner {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      font-size: 18px;
+      color: #e8e8e8;
+    }
+
+    .testimonial {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #111820;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        padding: 65px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Uzbek Pro Academy</div>
+
+    <div>
+      <a href="#lessons">Lessons</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Master Uzbek.<br>Speak Confidently.</h1>
+
+    <p>
+      Learn real, everyday Uzbek through practical,
+      personalized 1-on-1 lessons with Odina.
+    </p>
+
+    <a class="button" href="#contact">Book a Lesson</a>
+  </header>
+
+  <section id="lessons">
+    <h2 class="section-title">Learn Uzbek Your Way</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🗣 Speaking Practice</h3>
+        <p>
+          Build confidence through real conversations
+          and useful everyday Uzbek.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📚 Practical Lessons</h3>
+        <p>
+          Learn vocabulary, phrases and grammar
+          that you can actually use.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>👩‍🏫 1-on-1 Learning</h3>
+        <p>
+          Personalized lessons designed around
+          your goals, level and interests.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-inner">
+
+      <h2 class="section-title">Why Uzbek Pro Academy?</h2>
+
+      <p>
+        Uzbek Pro Academy was created to make learning Uzbek
+        simple, practical and accessible for English speakers.
+        Our goal is to help learners go beyond memorizing words
+        and become confident using Uzbek in real conversations.
+      </p>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">What Students Say</h2>
+
+    <div class="testimonial">
+      “Learning Uzbek became much easier when I could practice
+      real conversations instead of only memorizing vocabulary.”
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Ready to Learn Uzbek?</h2>
+
+    <p style="text-align:center; margin-bottom:30px;">
+      Start your Uzbek journey with a personalized 1-on-1 lesson.
+    </p>
+
+    <div style="text-align:center;">
+      <a class="button" href="mailto:odinabakhramovna@gmail.com">
+        Contact Odina
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Uzbek Pro Academy · Learn Uzbek with Odina
+  </footer>
+
+</body>
+</html>
