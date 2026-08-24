@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Uzbek Pro Academy</title>
+
+<meta name="description" content="Contact Uzbek Pro Academy. Ask questions, connect with Odina, or book a personalized 1-on-1 Uzbek lesson.">
+
+<style>
+
+:root{
+  --blue:#0066B3;
+  --blue-dark:#004B82;
+  --green:#1EB53A;
+  --red:#CE1126;
+  --navy:#091724;
+  --text:#17212B;
+  --muted:#66727E;
+  --bg:#F5F8FB;
+  --white:#FFFFFF;
+  --border:#E1E8EE;
+  --max:1180px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+
+/* TOP BAR */
+
+.topbar{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:9px 15px;
+  font-size:12px;
+  font-weight:700;
+}
+
+
+/* NAVIGATION */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:19px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.nav-links a{
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.nav-button{
+  background:var(--blue);
+  color:white!important;
+  padding:11px 18px;
+  border-radius:999px;
+}
+
+
+/* HERO */
+
+.hero{
+  background:white;
+  padding:85px 0 75px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:70px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  background:#EEF7FD;
+  border:1px solid #D8EAF5;
+  color:var(--blue-dark);
+  padding:8px 15px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(48px,6vw,72px);
+  line-height:.97;
+  letter-spacing:-4px;
+  color:var(--navy);
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:17px;
+  max-width:620px;
+}
+
+
+/* CONTACT CARD */
+
+.contact-card{
+  background:var(--navy);
+  color:white;
+  border-radius:30px;
+  padding:36px;
+  box-shadow:0 25px 70px rgba(8,30,50,.16);
+}
+
+.contact-card h2{
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.contact-card > p{
+  color:#AAB8C3;
+  font-size:13px;
+  margin-bottom:28px;
+}
+
+.contact-item{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+  padding:18px 0;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+
+.contact-icon{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  background:rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:19px;
+  flex-shrink:0;
+}
+
+.contact-item h3{
+  font-size:13px;
+  margin-bottom:3px;
+}
+
+.contact-item p,
+.contact-item a{
+  color:#AAB8C3;
+  font-size:12px;
+}
+
+.contact-item a:hover{
+  color:white;
+}
+
+
+/* MAIN CONTACT SECTION */
+
+.contact-section{
+  padding:90px 0;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:25px;
+}
+
+
+/* QUICK ACTIONS */
+
+.quick-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:30px;
+  margin-bottom:20px;
+}
+
+.label{
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+  font-weight:900;
+  margin-bottom:9px;
+}
+
+.quick-card h2{
+  font-size:28px;
+  line-height:1.1;
+  margin-bottom:10px;
+}
+
+.quick-card > p{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:22px;
+}
+
+.action{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:17px;
+  background:#F7F9FB;
+  border:1px solid var(--border);
+  border-radius:16px;
+  margin-top:10px;
+}
+
+.action-info{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.action-icon{
+  font-size:22px;
+}
+
+.action h3{
+  font-size:13px;
+}
+
+.action p{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.action-button{
+  background:var(--blue);
+  color:white;
+  padding:9px 14px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+
+/* FORM */
+
+.form-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:35px;
+}
+
+.form-card h2{
+  font-size:30px;
+  margin-bottom:8px;
+}
+
+.form-card > p{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+form{
+  display:grid;
+  gap:15px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+label{
+  font-size:11px;
+  font-weight:850;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:13px;
+  padding:13px 14px;
+  font-family:inherit;
+  font-size:13px;
+  outline:none;
+  background:#FBFCFD;
+  color:var(--text);
+  transition:.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--blue);
+  background:white;
+  box-shadow:0 0 0 3px rgba(0,102,179,.08);
+}
+
+textarea{
+  min-height:145px;
+  resize:vertical;
+}
+
+.submit{
+  border:none;
+  cursor:pointer;
+  background:var(--blue);
+  color:white;
+  padding:15px 22px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  font-family:inherit;
+}
+
+.submit:hover{
+  background:var(--blue-dark);
+}
+
+
+/* NOTE */
+
+.note{
+  margin-top:15px;
+  padding:13px;
+  border-radius:13px;
+  background:#F0F7F1;
+  color:#27652F;
+  font-size:11px;
+}
+
+
+/* FAQ */
+
+.faq{
+  background:white;
+  padding:90px 0;
+}
+
+.section-heading{
+  margin-bottom:35px;
+}
+
+.section-heading h2{
+  font-size:42px;
+  line-height:1.05;
+  letter-spacing:-2px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  max-width:650px;
+  margin-top:9px;
+}
+
+.faq-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+details{
+  background:#FAFCFD;
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:19px 20px;
+}
+
+summary{
+  cursor:pointer;
+  font-size:13px;
+  font-weight:850;
+}
+
+details p{
+  color:var(--muted);
+  font-size:12px;
+  padding-top:12px;
+}
+
+
+/* CTA */
+
+.cta{
+  padding:90px 0;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:44px;
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin-bottom:15px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.cta-button{
+  display:inline-block;
+  background:var(--blue);
+  color:white;
+  padding:14px 25px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#0B1118;
+  color:white;
+  padding:60px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr .8fr;
+  gap:40px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer h4{
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+footer p,
+footer a{
+  color:#96A3AE;
+  font-size:13px;
+}
+
+footer a{
+  display:block;
+  margin-bottom:9px;
+}
+
+footer a:hover{
+  color:white;
+}
+
+.copyright{
+  text-align:center;
+  color:#65717C;
+  padding-top:25px;
+  font-size:12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+  .nav-links a:not(.nav-button){
+    display:none;
+  }
+
+  .hero-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .faq-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:620px){
+
+  .hero{
+    padding:60px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-3px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cta h2{
+    font-size:36px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+🇺🇿 Learn Uzbek • Practical • Conversational • Personalized
+</div>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+🇺🇿 Uzbek Pro <span>Academy</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="bookings.html">Bookings</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="blog.html">Blog</a>
+<a href="videos.html">Videos</a>
+<a href="events.html">Events</a>
+<a href="about.html">About</a>
+
+<a href="contact.html" class="nav-button">
+Contact
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+
+<div>
+
+<div class="eyebrow">
+🇺🇿 Contact Uzbek Pro Academy
+</div>
+
+<h1>
+Let's start your
+<span>Uzbek journey.</span>
+</h1>
+
+<p>
+Have a question about lessons, want to know if Uzbek Pro Academy
+is right for you, or ready to book your first 1-on-1 lesson?
+I'd love to hear from you.
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h2>
+Get in touch
+</h2>
+
+<p>
+Choose the easiest way to contact Uzbek Pro Academy.
+</p>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📧
+</div>
+
+<div>
+
+<h3>
+Email
+</h3>
+
+<a href="mailto:Odinabakhramovna@gmail.com">
+Odinabakhramovna@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📅
+</div>
+
+<div>
+
+<h3>
+Book a lesson
+</h3>
+
+<p>
+Start with a personalized 1-on-1 Uzbek lesson.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+💬
+</div>
+
+<div>
+
+<h3>
+Questions?
+</h3>
+
+<p>
+Send a message and I'll get back to you.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT AREA -->
+
+<section class="contact-section">
+
+<div class="container">
+
+<div class="contact-grid">
+
+
+<!-- QUICK CONTACT -->
+
+<div>
+
+<div class="quick-card">
+
+<div class="label">
+Start here
+</div>
+
+<h2>
+What can I help you with?
+</h2>
+
+<p>
+Choose an option below and take the next step.
+</p>
+
+
+<div class="action">
+
+<div class="action-info">
+
+<div class="action-icon">
+📅
+</div>
+
+<div>
+
+<h3>
+Book a 1-on-1 lesson
+</h3>
+
+<p>
+Find a lesson and get started.
+</p>
+
+</div>
+
+</div>
+
+<a href="bookings.html" class="action-button">
+Book →
+</a>
+
+</div>
+
+
+<div class="action">
+
+<div class="action-info">
+
+<div class="action-icon">
+📚
+</div>
+
+<div>
+
+<h3>
+Explore programs
+</h3>
+
+<p>
+Discover Uzbek learning resources.
+</p>
+
+</div>
+
+</div>
+
+<a href="programs.html" class="action-button">
+Explore →
+</a>
+
+</div>
+
+
+<div class="action">
+
+<div class="action-info">
+
+<div class="action-icon">
+🎥
+</div>
+
+<div>
+
+<h3>
+Watch free videos
+</h3>
+
+<p>
+Learn useful Uzbek expressions.
+</p>
+
+</div>
+
+</div>
+
+<a href="videos.html" class="action-button">
+Watch →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="quick-card">
+
+<div class="label">
+Email
+</div>
+
+<h2>
+Prefer email?
+</h2>
+
+<p>
+Send your question directly to Odina.
+</p>
+
+<a
+href="mailto:Odinabakhramovna@gmail.com"
+class="action-button"
+style="display:inline-block;"
+>
+Email Odina →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FORM -->
+
+<div class="form-card">
+
+<div class="label">
+Contact form
+</div>
+
+<h2>
+Send a message.
+</h2>
+
+<p>
+Tell me a little about what you'd like to learn.
+</p>
+
+
+<form action="mailto:Odinabakhramovna@gmail.com"
+method="post"
+enctype="text/plain">
+
+
+<div class="form-row">
+
+<div class="field">
+
+<label for="name">
+Your name
+</label>
+
+<input
+type="text"
+id="name"
+name="Name"
+placeholder="Your name"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="email">
+Email address
+</label>
+
+<input
+type="email"
+id="email"
+name="Email"
+placeholder="you@example.com"
+required
+>
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<label for="reason">
+What are you interested in?
+</label>
+
+<select id="reason" name="Interest">
+
+<option value="">
+Choose an option
+</option>
+
+<option>
+1-on-1 Uzbek lessons
+</option>
+
+<option>
+Beginner Uzbek
+</option>
+
+<option>
+Conversational Uzbek
+</option>
+
+<option>
+Travel Uzbek
+</option>
+
+<option>
+Uzbek culture
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label for="message">
+Your message
+</label>
+
+<textarea
+id="message"
+name="Message"
+placeholder="Tell me what you'd like help with..."
+required
+></textarea>
+
+</div>
+
+
+<button type="submit" class="submit">
+Send Message →
+</button>
+
+</form>
+
+
+<div class="note">
+💡 For the fastest response, you can also email directly:
+Odinabakhramovna@gmail.com
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+FAQ
+</div>
+
+<h2>
+Before you message.
+</h2>
+
+<p>
+A few quick answers to common questions.
+</p>
+
+</div>
+
+
+<div class="faq-grid">
+
+
+<details>
+
+<summary>
+Do I need to know Uzbek before starting?
+</summary>
+
+<p>
+No. Complete beginners are welcome. Lessons can start from
+the basics and gradually build your speaking confidence.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Are the lessons 1-on-1?
+</summary>
+
+<p>
+Yes. Uzbek Pro Academy currently focuses on personalized
+1-on-1 Uzbek lessons with an instructor.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Who are the lessons for?
+</summary>
+
+<p>
+Lessons are designed primarily for English-speaking adults
+who want to learn Uzbek for travel, family, relationships,
+culture or personal interest.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can lessons be personalized?
+</summary>
+
+<p>
+Yes. Lesson content can be adapted to your level, goals,
+interests and preferred pace.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+How do I book a lesson?
+</summary>
+
+<p>
+Visit the Bookings page to see the available lesson options
+and continue with the booking process.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I ask a question before booking?
+</summary>
+
+<p>
+Absolutely. Send a message through this page or email
+Odina directly.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Ready to speak Uzbek?
+</h2>
+
+<p>
+Start learning with a personalized 1-on-1 lesson.
+</p>
+
+<a href="bookings.html" class="cta-button">
+Book Your First Lesson →
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+🇺🇿 Uzbek Pro Academy
+</h3>
+
+<p>
+Practical Uzbek lessons and resources for
+English-speaking learners.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Learn</h4>
+
+<a href="bookings.html">1-on-1 Lessons</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="videos.html">Videos</a>
+
+</div>
+
+
+<div>
+
+<h4>Explore</h4>
+
+<a href="blog.html">Blog</a>
+<a href="events.html">Events</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="files.html">Resources</a>
+
+</div>
+
+
+<div>
+
+<h4>Connect</h4>
+
+<a href="about.html">About</a>
+<a href="instagram.html">Instagram</a>
+<a href="chat.html">Chat</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+© 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+  </html>
