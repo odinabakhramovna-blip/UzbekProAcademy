@@ -6,10 +6,9 @@
 
 <title>Store | Uzbek Pro Academy</title>
 
-<meta name="description" content="Uzbek Pro Academy learning materials, courses, vocabulary packs and digital resources for English-speaking Uzbek learners.">
+<meta name="description" content="Learn Uzbek with practical courses, vocabulary packs and digital learning resources from Uzbek Pro Academy.">
 
 <style>
-
 :root{
   --blue:#0066B3;
   --blue-dark:#004B82;
@@ -19,9 +18,8 @@
   --text:#17212B;
   --muted:#66727E;
   --bg:#F5F8FB;
-  --white:#FFFFFF;
-  --border:#E3E9EF;
-  --shadow:0 18px 55px rgba(10,35,60,.10);
+  --white:#fff;
+  --border:#E2E8EE;
   --max:1180px;
 }
 
@@ -31,9 +29,7 @@
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
   font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
@@ -52,25 +48,23 @@ a{
   margin:auto;
 }
 
-
 /* TOP BAR */
 
 .topbar{
   background:var(--navy);
-  color:white;
+  color:#fff;
   text-align:center;
   padding:9px 15px;
   font-size:13px;
 }
 
-
-/* NAVIGATION */
+/* NAV */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.96);
+  background:rgba(255,255,255,.97);
   backdrop-filter:blur(15px);
   border-bottom:1px solid var(--border);
 }
@@ -89,82 +83,44 @@ header{
   white-space:nowrap;
 }
 
-.logo span{
-  color:var(--blue);
-}
+.logo span{color:var(--blue);}
 
 .nav-links{
   display:flex;
   align-items:center;
   gap:19px;
   font-size:13px;
-  font-weight:700;
+  font-weight:750;
 }
 
-.nav-links a{
-  transition:.2s;
-}
+.nav-links a{transition:.2s;}
 
-.nav-links a:hover{
-  color:var(--blue);
-}
+.nav-links a:hover{color:var(--blue);}
 
 .nav-button{
   background:var(--blue);
-  color:white!important;
+  color:#fff!important;
   padding:11px 18px;
   border-radius:999px;
 }
 
-
 /* HERO */
 
 .hero{
-  background:white;
-  padding:90px 0;
+  background:#fff;
+  padding:90px 0 80px;
   text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero:before{
-  content:"";
-  position:absolute;
-  width:400px;
-  height:400px;
-  background:rgba(0,102,179,.06);
-  border-radius:50%;
-  right:-150px;
-  top:-200px;
-}
-
-.hero:after{
-  content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  background:rgba(30,181,58,.05);
-  border-radius:50%;
-  left:-120px;
-  bottom:-180px;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:800px;
-  margin:auto;
 }
 
 .eyebrow{
   display:inline-block;
-  padding:8px 15px;
-  background:#F1F7FC;
-  border:1px solid #DCEAF4;
+  background:#EEF7FD;
+  border:1px solid #D9EAF5;
   color:var(--blue-dark);
+  padding:8px 15px;
   border-radius:999px;
-  font-size:12px;
-  font-weight:800;
+  font-size:11px;
+  font-weight:850;
   margin-bottom:22px;
 }
 
@@ -173,59 +129,26 @@ header{
   line-height:.98;
   letter-spacing:-4px;
   color:var(--navy);
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
-.hero h1 span{
-  color:var(--blue);
-}
+.hero h1 span{color:var(--blue);}
 
 .hero p{
-  color:var(--muted);
-  max-width:680px;
+  max-width:700px;
   margin:auto;
+  color:var(--muted);
   font-size:18px;
 }
 
-
-/* CATEGORY BAR */
-
-.categories{
-  background:white;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-
-.category-inner{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.category-inner a{
-  padding:19px 27px;
-  font-size:13px;
-  font-weight:750;
-  border-right:1px solid var(--border);
-  transition:.2s;
-}
-
-.category-inner a:hover{
-  background:#F4F8FB;
-  color:var(--blue);
-}
-
-
-/* STORE */
+/* COURSES */
 
 .store{
-  padding:90px 0;
+  padding:75px 0 95px;
 }
 
 .section-heading{
-  text-align:center;
-  max-width:700px;
-  margin:0 auto 50px;
+  margin-bottom:35px;
 }
 
 .label{
@@ -234,312 +157,315 @@ header{
   letter-spacing:2px;
   font-size:11px;
   font-weight:850;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .section-heading h2{
-  font-size:clamp(38px,5vw,56px);
+  font-size:40px;
   line-height:1.05;
-  letter-spacing:-2.5px;
-  margin-bottom:17px;
-  color:var(--navy);
+  letter-spacing:-2px;
 }
 
 .section-heading p{
   color:var(--muted);
-  font-size:16px;
+  margin-top:10px;
+  max-width:650px;
 }
 
-
-/* PRODUCTS */
-
-.products{
+.course-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:22px;
 }
 
-.product{
-  background:white;
+.course{
+  background:#fff;
   border:1px solid var(--border);
-  border-radius:24px;
+  border-radius:27px;
   overflow:hidden;
   transition:.25s;
+  box-shadow:0 8px 30px rgba(10,35,60,.04);
 }
 
-.product:hover{
-  transform:translateY(-7px);
-  box-shadow:var(--shadow);
-}
-
-.product-image{
-  height:220px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.product-image:after{
-  content:"🇺🇿";
-  font-size:85px;
-  opacity:.9;
+.course:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 55px rgba(10,35,60,.10);
 }
 
 .course-image{
-  background:linear-gradient(135deg,#0066B3,#008BC7);
+  min-height:205px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:70px;
+  position:relative;
 }
 
-.pdf-image{
-  background:linear-gradient(135deg,#1EB53A,#139D30);
+.course:nth-child(1) .course-image{
+  background:linear-gradient(145deg,#0066B3,#2A91CE);
 }
 
-.audio-image{
-  background:linear-gradient(135deg,#0B1724,#31536E);
+.course:nth-child(2) .course-image{
+  background:linear-gradient(145deg,#1EB53A,#55CD70);
 }
 
-.vocab-image{
-  background:linear-gradient(135deg,#CE1126,#E64A5A);
+.course:nth-child(3) .course-image{
+  background:linear-gradient(145deg,#CE1126,#E75A68);
 }
 
-.worksheet-image{
-  background:linear-gradient(135deg,#7B4FA3,#9B6BC3);
+.course:nth-child(4) .course-image{
+  background:linear-gradient(145deg,#004B82,#0066B3);
 }
 
-.bundle-image{
-  background:linear-gradient(135deg,#0066B3,#1EB53A);
+.course:nth-child(5) .course-image{
+  background:linear-gradient(145deg,#188C35,#1EB53A);
 }
 
-.product-content{
-  padding:28px;
+.course:nth-child(6) .course-image{
+  background:linear-gradient(145deg,#A30D20,#CE1126);
 }
 
-.product-tag{
-  display:inline-block;
-  font-size:10px;
+.badge{
+  position:absolute;
+  top:16px;
+  left:16px;
+  background:#fff;
+  color:var(--navy);
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:9px;
+  font-weight:900;
   text-transform:uppercase;
-  letter-spacing:1.5px;
-  font-weight:850;
+  letter-spacing:.7px;
+}
+
+.course-content{
+  padding:25px;
+}
+
+.course-level{
   color:var(--blue);
+  font-size:10px;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  margin-bottom:8px;
+}
+
+.course h3{
+  font-size:21px;
+  line-height:1.2;
   margin-bottom:10px;
 }
 
-.product h3{
-  font-size:22px;
-  line-height:1.15;
-  margin-bottom:11px;
-}
-
-.product p{
+.course p{
   color:var(--muted);
   font-size:13px;
-  margin-bottom:19px;
+  margin-bottom:18px;
 }
 
-.product-features{
+.features{
   list-style:none;
   margin-bottom:22px;
 }
 
-.product-features li{
+.features li{
   font-size:12px;
-  font-weight:650;
-  margin-bottom:7px;
+  margin:7px 0;
 }
 
-.product-features li:before{
+.features li::before{
   content:"✓";
   color:var(--green);
   font-weight:900;
   margin-right:7px;
 }
 
-.product-footer{
+.course-bottom{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:12px;
+  gap:15px;
 }
 
 .price{
-  font-weight:850;
-  font-size:18px;
-}
-
-.coming{
-  padding:10px 13px;
-  background:#F0F3F5;
-  border-radius:999px;
-  color:var(--muted);
-  font-size:10px;
-  font-weight:800;
-}
-
-
-/* FEATURED */
-
-.featured{
-  padding:100px 0;
-  background:var(--navy);
-  color:white;
-}
-
-.featured-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-}
-
-.featured .label{
-  color:#7CC9FF;
-}
-
-.featured h2{
-  font-size:clamp(38px,5vw,58px);
-  line-height:1.05;
-  letter-spacing:-2px;
-  margin-bottom:20px;
-}
-
-.featured p{
-  color:#B8C4CF;
-  font-size:16px;
-  margin-bottom:25px;
-}
-
-.feature-list{
-  list-style:none;
-}
-
-.feature-list li{
-  margin-bottom:12px;
-  color:#E9EEF2;
-}
-
-.feature-list li:before{
-  content:"✓";
-  color:#52D96D;
+  font-size:23px;
   font-weight:900;
-  margin-right:10px;
+  color:var(--navy);
 }
 
-.featured-card{
-  background:white;
-  color:var(--text);
-  border-radius:28px;
-  padding:38px;
-  box-shadow:0 25px 70px rgba(0,0,0,.25);
+.price span{
+  display:block;
+  font-size:9px;
+  color:var(--muted);
+  font-weight:600;
 }
 
-.featured-card .mini-label{
-  color:var(--blue);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:2px;
+.buy{
+  background:var(--blue);
+  color:#fff;
+  padding:11px 17px;
+  border-radius:999px;
+  font-size:10px;
   font-weight:850;
 }
 
-.featured-card h3{
-  font-size:31px;
-  margin:12px 0;
+/* HOW IT WORKS */
+
+.how{
+  background:#fff;
+  padding:90px 0;
+  border-top:1px solid var(--border);
 }
 
-.featured-card p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-.contact-button{
-  display:block;
-  margin-top:25px;
-  text-align:center;
-  background:var(--blue);
-  color:white;
-  padding:14px;
-  border-radius:999px;
-  font-weight:800;
-}
-
-
-/* WHY STORE */
-
-.why{
-  padding:100px 0;
-}
-
-.why-grid{
+.steps{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
 
-.why-item{
-  background:white;
+.step{
   border:1px solid var(--border);
-  border-radius:20px;
+  border-radius:22px;
   padding:27px;
+  background:#FAFCFD;
 }
 
-.icon{
-  font-size:30px;
+.number{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
   margin-bottom:14px;
 }
 
-.why-item h3{
+.step h3{
   font-size:17px;
   margin-bottom:7px;
 }
 
-.why-item p{
+.step p{
   color:var(--muted);
-  font-size:13px;
+  font-size:12px;
 }
 
+/* DIGITAL PRODUCTS */
+
+.digital{
+  padding:90px 0;
+}
+
+.digital-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.digital-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.digital-icon{
+  width:68px;
+  height:68px;
+  flex:none;
+  background:#EEF7FD;
+  border-radius:19px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:31px;
+}
+
+.digital-card h3{
+  font-size:19px;
+  margin-bottom:5px;
+}
+
+.digital-card p{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+.digital-link{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:850;
+}
+
+/* FAQ */
+
+.faq{
+  background:#fff;
+  padding:90px 0;
+  border-top:1px solid var(--border);
+}
+
+.faq-grid{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:#FAFCFD;
+  border:1px solid var(--border);
+  border-radius:17px;
+  margin-bottom:12px;
+  padding:19px 22px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:800;
+  font-size:14px;
+}
+
+details p{
+  color:var(--muted);
+  font-size:13px;
+  padding-top:12px;
+}
 
 /* CTA */
 
 .cta{
-  background:linear-gradient(135deg,#0066B3,#008BC7);
-  color:white;
+  padding:95px 0;
   text-align:center;
-  padding:100px 0;
-}
-
-.cta-box{
-  max-width:800px;
-  margin:auto;
 }
 
 .cta h2{
-  font-size:clamp(40px,6vw,64px);
+  font-size:45px;
   line-height:1;
-  letter-spacing:-3px;
-  margin-bottom:20px;
+  letter-spacing:-2.5px;
+  margin-bottom:17px;
 }
 
 .cta p{
-  color:#E4F5FF;
-  margin-bottom:30px;
-  font-size:17px;
+  color:var(--muted);
+  margin-bottom:28px;
 }
 
 .cta-button{
   display:inline-block;
-  background:white;
-  color:var(--navy);
-  padding:15px 26px;
+  background:var(--blue);
+  color:#fff;
+  padding:14px 26px;
   border-radius:999px;
   font-weight:850;
 }
-
 
 /* FOOTER */
 
 footer{
   background:#0B1118;
-  color:white;
+  color:#fff;
   padding:60px 0 25px;
 }
 
@@ -551,18 +477,16 @@ footer{
   border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-footer h3{
-  margin-bottom:12px;
-}
+footer h3{margin-bottom:10px;}
 
 footer h4{
-  margin-bottom:15px;
   font-size:14px;
+  margin-bottom:14px;
 }
 
 footer p,
 footer a{
-  color:#98A4AE;
+  color:#96A3AE;
   font-size:13px;
 }
 
@@ -571,35 +495,28 @@ footer a{
   margin-bottom:9px;
 }
 
-footer a:hover{
-  color:white;
-}
+footer a:hover{color:#fff;}
 
 .copyright{
   text-align:center;
-  color:#66727E;
+  color:#65717C;
   padding-top:25px;
   font-size:12px;
 }
 
+/* MOBILE */
 
-/* RESPONSIVE */
-
-@media(max-width:1000px){
+@media(max-width:900px){
 
   .nav-links a:not(.nav-button){
     display:none;
   }
 
-  .products{
+  .course-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .featured-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-grid{
+  .steps{
     grid-template-columns:1fr 1fr;
   }
 
@@ -611,7 +528,7 @@ footer a:hover{
 @media(max-width:600px){
 
   .hero{
-    padding:70px 0;
+    padding:65px 0;
   }
 
   .hero h1{
@@ -619,49 +536,34 @@ footer a:hover{
     letter-spacing:-3px;
   }
 
-  .category-inner a{
-    padding:14px;
-    font-size:11px;
-  }
-
-  .store,
-  .why,
-  .featured{
-    padding:70px 0;
-  }
-
-  .products{
+  .course-grid,
+  .steps,
+  .digital-grid{
     grid-template-columns:1fr;
   }
 
-  .why-grid{
-    grid-template-columns:1fr;
+  .section-heading h2{
+    font-size:33px;
+  }
+
+  .cta h2{
+    font-size:37px;
   }
 
   .footer-grid{
     grid-template-columns:1fr;
   }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- TOP BAR -->
-
 <div class="topbar">
-🇺🇿 Practical Uzbek learning for English speakers
+🇺🇿 Practical Uzbek • One-time courses • Learn at your pace
 </div>
 
-
-<!-- NAVIGATION -->
-
 <header>
-
 <div class="container nav">
 
 <a href="index.html" class="logo">
@@ -669,47 +571,41 @@ footer a:hover{
 </a>
 
 <nav class="nav-links">
-
 <a href="bookings.html">Bookings</a>
 <a href="programs.html">Programs</a>
 <a href="store.html">Store</a>
 <a href="blog.html">Blog</a>
 <a href="videos.html">Videos</a>
+<a href="events.html">Events</a>
 <a href="about.html">About</a>
-
-<a href="contact.html" class="nav-button">
-Contact
-</a>
-
+<a href="contact.html" class="nav-button">Contact</a>
 </nav>
 
 </div>
-
 </header>
 
 
 <main>
 
-
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="container hero-content">
+<div class="container">
 
 <div class="eyebrow">
 🛍️ Uzbek Pro Academy Store
 </div>
 
 <h1>
-Learn more.<br>
-<span>Practice better.</span>
+Learn Uzbek.<br>
+<span>Build your skills.</span>
 </h1>
 
 <p>
-Explore Uzbek learning programs, vocabulary resources,
-digital materials and practical tools designed to help
-you learn Uzbek with confidence.
+Explore practical Uzbek courses and digital learning resources
+designed for English-speaking learners. Choose what you need
+and learn at your own pace.
 </p>
 
 </div>
@@ -717,500 +613,619 @@ you learn Uzbek with confidence.
 </section>
 
 
-<!-- CATEGORY NAV -->
-
-<div class="categories">
-
-<div class="container category-inner">
-
-<a href="#courses">🎓 Courses</a>
-
-<a href="#pdfs">📚 PDFs</a>
-
-<a href="#audio">🎧 Audio</a>
-
-<a href="#vocabulary">🧠 Vocabulary</a>
-
-<a href="#bundles">⭐ Bundles</a>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCTS -->
+<!-- COURSES -->
 
 <section class="store">
 
 <div class="container">
 
-
 <div class="section-heading">
 
 <div class="label">
-Digital Learning Store
+Courses
 </div>
 
 <h2>
-Resources for your Uzbek journey.
+Choose your Uzbek journey.
 </h2>
 
 <p>
-Simple, practical resources that help you
-learn Uzbek wherever you are.
+Every course is purchased once. No monthly subscription required.
+Start with the course that matches your current level and goals.
 </p>
 
 </div>
 
 
-<div class="products">
+<div class="course-grid">
 
 
-<!-- COURSE -->
+<!-- COURSE 1 -->
 
-<article class="product" id="courses">
+<article class="course">
 
-<div class="product-image course-image"></div>
+<div class="course-image">
 
-<div class="product-content">
+<div class="badge">Coming Soon</div>
 
-<div class="product-tag">
-Online Course
+📘
+
+</div>
+
+<div class="course-content">
+
+<div class="course-level">
+Beginner • A1
 </div>
 
 <h3>
-Uzbek Foundations
+Uzbek From Zero
 </h3>
 
 <p>
-A beginner-friendly course designed to help
-you build your first strong Uzbek foundation.
+A practical introduction to Uzbek for complete beginners.
 </p>
 
-<ul class="product-features">
-
+<ul class="features">
 <li>Essential vocabulary</li>
-<li>Everyday phrases</li>
-<li>Grammar basics</li>
-<li>Speaking practice</li>
-
-</ul>
-
-<div class="product-footer">
-
-<div class="price">
-Coming soon
-</div>
-
-<span class="coming">
-SOON
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- PDF -->
-
-<article class="product" id="pdfs">
-
-<div class="product-image pdf-image"></div>
-
-<div class="product-content">
-
-<div class="product-tag">
-PDF Resource
-</div>
-
-<h3>
-Essential Uzbek Phrases
-</h3>
-
-<p>
-A practical phrasebook for everyday situations,
-travel and conversations.
-</p>
-
-<ul class="product-features">
-
+<li>Basic sentence structure</li>
 <li>Everyday expressions</li>
-<li>English translations</li>
-<li>Easy pronunciation help</li>
-<li>Beginner friendly</li>
-
+<li>Speaking practice</li>
 </ul>
 
-<div class="product-footer">
+<div class="course-bottom">
 
 <div class="price">
-Coming soon
+$20
+<span>one-time payment</span>
 </div>
 
-<span class="coming">
-SOON
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- AUDIO -->
-
-<article class="product" id="audio">
-
-<div class="product-image audio-image"></div>
-
-<div class="product-content">
-
-<div class="product-tag">
-Audio Pack
-</div>
-
-<h3>
-Uzbek Pronunciation Pack
-</h3>
-
-<p>
-Listen and repeat useful Uzbek words and
-phrases with clear pronunciation practice.
-</p>
-
-<ul class="product-features">
-
-<li>Native-style pronunciation</li>
-<li>Repeat-after-me practice</li>
-<li>Everyday vocabulary</li>
-<li>Listening training</li>
-
-</ul>
-
-<div class="product-footer">
-
-<div class="price">
-Coming soon
-</div>
-
-<span class="coming">
-SOON
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- VOCABULARY -->
-
-<article class="product" id="vocabulary">
-
-<div class="product-image vocab-image"></div>
-
-<div class="product-content">
-
-<div class="product-tag">
-Vocabulary
-</div>
-
-<h3>
-1000 Essential Uzbek Words
-</h3>
-
-<p>
-Build your vocabulary with the most useful
-Uzbek words for everyday communication.
-</p>
-
-<ul class="product-features">
-
-<li>1000 essential words</li>
-<li>English meanings</li>
-<li>Useful examples</li>
-<li>Organized by topic</li>
-
-</ul>
-
-<div class="product-footer">
-
-<div class="price">
-Coming soon
-</div>
-
-<span class="coming">
-SOON
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- WORKSHEET -->
-
-<article class="product">
-
-<div class="product-image worksheet-image"></div>
-
-<div class="product-content">
-
-<div class="product-tag">
-Practice Pack
-</div>
-
-<h3>
-Uzbek Practice Worksheets
-</h3>
-
-<p>
-Printable exercises to help reinforce vocabulary,
-grammar and everyday Uzbek.
-</p>
-
-<ul class="product-features">
-
-<li>Vocabulary exercises</li>
-<li>Grammar practice</li>
-<li>Sentence building</li>
-<li>Self-study friendly</li>
-
-</ul>
-
-<div class="product-footer">
-
-<div class="price">
-Coming soon
-</div>
-
-<span class="coming">
-SOON
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- BUNDLE -->
-
-<article class="product" id="bundles">
-
-<div class="product-image bundle-image"></div>
-
-<div class="product-content">
-
-<div class="product-tag">
-Bundle
-</div>
-
-<h3>
-Uzbek Starter Bundle
-</h3>
-
-<p>
-A complete starter collection for learners
-who want everything in one place.
-</p>
-
-<ul class="product-features">
-
-<li>Beginner course</li>
-<li>Vocabulary pack</li>
-<li>Phrasebook</li>
-<li>Practice materials</li>
-
-</ul>
-
-<div class="product-footer">
-
-<div class="price">
-Coming soon
-</div>
-
-<span class="coming">
-SOON
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FEATURED -->
-
-<section class="featured">
-
-<div class="container featured-grid">
-
-<div>
-
-<div class="label">
-Built for real learning
-</div>
-
-<h2>
-Don't just learn Uzbek.<br>
-Use it.
-</h2>
-
-<p>
-Every resource at Uzbek Pro Academy is designed
-around practical communication, not endless
-memorization.
-</p>
-
-<ul class="feature-list">
-
-<li>Real-life vocabulary</li>
-<li>Useful everyday phrases</li>
-<li>Speaking-focused learning</li>
-<li>Clear English explanations</li>
-<li>Uzbek culture and context</li>
-
-</ul>
-
-</div>
-
-
-<div class="featured-card">
-
-<div class="mini-label">
-Want something specific?
-</div>
-
-<h3>
-Start with 1-on-1 lessons.
-</h3>
-
-<p>
-While our digital resources are being developed,
-you can start learning Uzbek directly with Odina
-through personalized private lessons.
-</p>
-
-<a href="bookings.html" class="contact-button">
-Book a Lesson →
+<a href="contact.html" class="buy">
+Learn More →
 </a>
 
 </div>
 
 </div>
 
+</article>
+
+
+<!-- COURSE 2 -->
+
+<article class="course">
+
+<div class="course-image">
+
+<div class="badge">Coming Soon</div>
+
+🗣️
+
+</div>
+
+<div class="course-content">
+
+<div class="course-level">
+Beginner • A1–A2
+</div>
+
+<h3>
+Everyday Uzbek
+</h3>
+
+<p>
+Learn the Uzbek you need for real conversations and daily life.
+</p>
+
+<ul class="features">
+<li>Daily conversations</li>
+<li>Useful phrases</li>
+<li>Listening practice</li>
+<li>Speaking confidence</li>
+</ul>
+
+<div class="course-bottom">
+
+<div class="price">
+$30
+<span>one-time payment</span>
+</div>
+
+<a href="contact.html" class="buy">
+Learn More →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 3 -->
+
+<article class="course">
+
+<div class="course-image">
+
+<div class="badge">Coming Soon</div>
+
+🎯
+
+</div>
+
+<div class="course-content">
+
+<div class="course-level">
+A2–B1
+</div>
+
+<h3>
+Speak Uzbek Confidently
+</h3>
+
+<p>
+Move beyond basic phrases and become a more confident speaker.
+</p>
+
+<ul class="features">
+<li>Conversation patterns</li>
+<li>Natural expressions</li>
+<li>Grammar in context</li>
+<li>Speaking challenges</li>
+</ul>
+
+<div class="course-bottom">
+
+<div class="price">
+$50
+<span>one-time payment</span>
+</div>
+
+<a href="contact.html" class="buy">
+Learn More →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 4 -->
+
+<article class="course">
+
+<div class="course-image">
+
+<div class="badge">Coming Soon</div>
+
+✈️
+
+</div>
+
+<div class="course-content">
+
+<div class="course-level">
+Travel Uzbek
+</div>
+
+<h3>
+Uzbek for Travelers
+</h3>
+
+<p>
+Learn practical Uzbek for your next trip to Uzbekistan.
+</p>
+
+<ul class="features">
+<li>Airport & transport</li>
+<li>Restaurants & shopping</li>
+<li>Directions</li>
+<li>Useful travel phrases</li>
+</ul>
+
+<div class="course-bottom">
+
+<div class="price">
+$20
+<span>one-time payment</span>
+</div>
+
+<a href="contact.html" class="buy">
+Learn More →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 5 -->
+
+<article class="course">
+
+<div class="course-image">
+
+<div class="badge">Coming Soon</div>
+
+❤️
+
+</div>
+
+<div class="course-content">
+
+<div class="course-level">
+Conversation
+</div>
+
+<h3>
+Uzbek for Family & Relationships
+</h3>
+
+<p>
+Useful language for communicating with Uzbek-speaking family,
+friends and loved ones.
+</p>
+
+<ul class="features">
+<li>Personal conversations</li>
+<li>Family vocabulary</li>
+<li>Natural expressions</li>
+<li>Cultural context</li>
+</ul>
+
+<div class="course-bottom">
+
+<div class="price">
+$30
+<span>one-time payment</span>
+</div>
+
+<a href="contact.html" class="buy">
+Learn More →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 6 -->
+
+<article class="course">
+
+<div class="course-image">
+
+<div class="badge">Coming Soon</div>
+
+🇺🇿
+
+</div>
+
+<div class="course-content">
+
+<div class="course-level">
+Culture
+</div>
+
+<h3>
+Uzbek Language & Culture
+</h3>
+
+<p>
+Explore useful Uzbek expressions while discovering the culture
+behind the language.
+</p>
+
+<ul class="features">
+<li>Culture & traditions</li>
+<li>Common expressions</li>
+<li>Social language</li>
+<li>Real-life context</li>
+</ul>
+
+<div class="course-bottom">
+
+<div class="price">
+$30
+<span>one-time payment</span>
+</div>
+
+<a href="contact.html" class="buy">
+Learn More →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- WHY -->
+<!-- HOW IT WORKS -->
 
-<section class="why">
+<section class="how">
 
 <div class="container">
 
 <div class="section-heading">
 
 <div class="label">
-Why Uzbek Pro Academy
+Simple process
 </div>
 
 <h2>
-Learning materials that make sense.
+Learn without the subscription.
 </h2>
 
-<p>
-Everything is designed to make Uzbek easier,
-more practical and more enjoyable.
-</p>
-
 </div>
 
 
-<div class="why-grid">
+<div class="steps">
 
+<div class="step">
 
-<div class="why-item">
-
-<div class="icon">
-🎯
-</div>
+<div class="number">01</div>
 
 <h3>
-Practical
+Choose a course
 </h3>
 
 <p>
-Focus on Uzbek you'll actually use in real life.
+Select the Uzbek course that matches your level and goals.
 </p>
 
 </div>
 
 
-<div class="why-item">
+<div class="step">
 
-<div class="icon">
-🧠
-</div>
+<div class="number">02</div>
 
 <h3>
-Simple
+Pay once
 </h3>
 
 <p>
-Clear explanations without unnecessary complexity.
+Purchase the course with a simple one-time payment.
 </p>
 
 </div>
 
 
-<div class="why-item">
+<div class="step">
 
-<div class="icon">
-🇺🇿
-</div>
+<div class="number">03</div>
 
 <h3>
-Authentic
+Start learning
 </h3>
 
 <p>
-Learn real Uzbek and understand the culture behind it.
+Access the course materials and learn at your own pace.
 </p>
 
 </div>
 
 
-<div class="why-item">
+<div class="step">
 
-<div class="icon">
-💻
-</div>
+<div class="number">04</div>
 
 <h3>
-Accessible
+Practice & improve
 </h3>
 
 <p>
-Learn from anywhere and study at your own pace.
+Use your new Uzbek in real conversations and everyday life.
 </p>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DIGITAL PRODUCTS -->
+
+<section class="digital">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+Digital resources
+</div>
+
+<h2>
+More ways to practice.
+</h2>
+
+</div>
+
+
+<div class="digital-grid">
+
+
+<div class="digital-card">
+
+<div class="digital-icon">
+📚
+</div>
+
+<div>
+
+<h3>
+Vocabulary Packs
+</h3>
+
+<p>
+Practical Uzbek vocabulary organized by topic and level.
+</p>
+
+<a href="files.html" class="digital-link">
+Explore Resources →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="digital-card">
+
+<div class="digital-icon">
+📝
+</div>
+
+<div>
+
+<h3>
+Practice Worksheets
+</h3>
+
+<p>
+Printable exercises for vocabulary, grammar and speaking.
+</p>
+
+<a href="files.html" class="digital-link">
+Explore Resources →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="digital-card">
+
+<div class="digital-icon">
+🎧
+</div>
+
+<div>
+
+<h3>
+Audio Practice
+</h3>
+
+<p>
+Listen, repeat and improve your Uzbek pronunciation.
+</p>
+
+<a href="files.html" class="digital-link">
+Explore Resources →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="digital-card">
+
+<div class="digital-icon">
+🎁
+</div>
+
+<div>
+
+<h3>
+Free Resources
+</h3>
+
+<p>
+Start learning with selected free materials from the academy.
+</p>
+
+<a href="files.html" class="digital-link">
+View Free Resources →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+Store FAQ
+</div>
+
+<h2>
+Before you buy.
+</h2>
+
+</div>
+
+
+<div class="faq-grid">
+
+<details>
+<summary>Do I need to subscribe every month?</summary>
+<p>
+No. Uzbek Pro Academy courses are designed around one-time payments.
+A membership option may be introduced in the future.
+</p>
+</details>
+
+
+<details>
+<summary>Are the courses suitable for complete beginners?</summary>
+<p>
+Yes. Beginner courses are designed for students who may know little
+or no Uzbek.
+</p>
+</details>
+
+
+<details>
+<summary>Can I also book a private lesson?</summary>
+<p>
+Yes. If you want personalized instruction, you can book a
+1-on-1 lesson separately.
+</p>
+</details>
+
+
+<details>
+<summary>Are the courses available now?</summary>
+<p>
+The academy is currently building its course library.
+Individual courses will be added as they become available.
+</p>
+</details>
 
 
 </div>
@@ -1226,39 +1241,30 @@ Learn from anywhere and study at your own pace.
 
 <div class="container">
 
-<div class="cta-box">
-
 <h2>
-Ready to learn Uzbek?
+Want personal guidance?
 </h2>
 
 <p>
-Start your journey with a personalized
-1-on-1 lesson with Odina.
+Combine self-paced learning with a personalized 1-on-1 Uzbek lesson.
 </p>
 
 <a href="bookings.html" class="cta-button">
-Book Your First Lesson 🇺🇿 →
+Book a 1-on-1 Lesson →
 </a>
-
-</div>
 
 </div>
 
 </section>
 
-
 </main>
 
-
-<!-- FOOTER -->
 
 <footer>
 
 <div class="container">
 
 <div class="footer-grid">
-
 
 <div>
 
@@ -1267,8 +1273,8 @@ Book Your First Lesson 🇺🇿 →
 </h3>
 
 <p>
-Practical Uzbek lessons and learning resources
-for English-speaking students.
+Practical Uzbek lessons and resources for
+English-speaking learners.
 </p>
 
 </div>
@@ -1290,7 +1296,7 @@ for English-speaking students.
 
 <h4>Explore</h4>
 
-<a href="blog.html">Blog</a>
+<a href="blog.html">Learning Hub</a>
 <a href="events.html">Events</a>
 <a href="portfolio.html">Portfolio</a>
 <a href="files.html">Resources</a>
@@ -1309,20 +1315,16 @@ for English-speaking students.
 
 </div>
 
-
 </div>
 
 
 <div class="copyright">
-
 © 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
-
 </div>
 
 </div>
 
 </footer>
-
 
 </body>
   </html>
