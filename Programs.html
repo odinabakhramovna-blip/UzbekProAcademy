@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Online Programs | Uzbek Pro Academy</title>
+
+  <meta name="description"
+        content="Explore practical Uzbek learning programs for English speakers at Uzbek Pro Academy. Learn Uzbek step by step with vocabulary, grammar and speaking practice.">
+
+  <meta name="theme-color" content="#0066B3">
+
+  <style>
+
+    :root {
+      --blue: #0066B3;
+      --blue-dark: #004C87;
+      --green: #1EB53A;
+      --red: #CE1126;
+      --navy: #0B1724;
+      --text: #17212B;
+      --muted: #66727E;
+      --light: #F5F8FB;
+      --white: #FFFFFF;
+      --border: #E4EAF0;
+      --shadow: 0 20px 60px rgba(15,42,67,.10);
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+
+    /* TOP BAR */
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+    }
+
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 850;
+      white-space: nowrap;
+      letter-spacing: -.5px;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .nav-links a {
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-button {
+      background: var(--blue);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 999px;
+    }
+
+    .nav-button:hover {
+      background: var(--blue-dark);
+    }
+
+
+    /* HERO */
+
+    .hero {
+      background: white;
+      padding: 100px 0 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: rgba(0,102,179,.06);
+      border-radius: 50%;
+      top: -220px;
+      right: -100px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(30,181,58,.05);
+      border-radius: 50%;
+      bottom: -170px;
+      left: -100px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 15px;
+      background: #F1F7FC;
+      border: 1px solid #DCEAF4;
+      color: var(--blue-dark);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 23px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px,7vw,76px);
+      line-height: .98;
+      letter-spacing: -4px;
+      color: var(--navy);
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+
+    /* LEVEL NAVIGATION */
+
+    .level-nav {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .level-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .level-links a {
+      padding: 20px 30px;
+      font-size: 14px;
+      font-weight: 750;
+      border-right: 1px solid var(--border);
+      transition: .2s;
+    }
+
+    .level-links a:hover {
+      background: #F5F9FC;
+      color: var(--blue);
+    }
+
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 850;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(38px,5vw,56px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+
+    /* PROGRAM CARDS */
+
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .program {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      overflow: hidden;
+      transition: .25s;
+      box-shadow: 0 5px 20px rgba(15,42,67,.03);
+    }
+
+    .program:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .program-top {
+      padding: 32px;
+      min-height: 230px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .beginner {
+      background: linear-gradient(145deg,#0066B3,#078AC8);
+    }
+
+    .intermediate {
+      background: linear-gradient(145deg,#0066B3,#1EB53A);
+    }
+
+    .advanced {
+      background: linear-gradient(145deg,#0B1724,#0066B3);
+    }
+
+    .program-top::after {
+      content: "🇺🇿";
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 65px;
+    }
+
+    .level {
+      position: relative;
+      z-index: 2;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 850;
+      opacity: .85;
+    }
+
+    .program-top h3 {
+      position: relative;
+      z-index: 2;
+      font-size: 30px;
+      line-height: 1.05;
+      margin-top: 20px;
+      max-width: 230px;
+    }
+
+    .program-body {
+      padding: 28px;
+    }
+
+    .program-body p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    .coming {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      background: #F3F6F8;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+
+    /* FEATURED PROGRAM */
+
+    .featured {
+      background: var(--navy);
+      color: white;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .featured .label {
+      color: #7CC9FF;
+    }
+
+    .featured h2 {
+      font-size: clamp(38px,5vw,58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .featured p {
+      color: #B7C2CC;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .featured-list {
+      list-style: none;
+    }
+
+    .featured-list li {
+      margin-bottom: 13px;
+      color: #E7EDF2;
+    }
+
+    .featured-list li::before {
+      content: "✓";
+      color: #52D96D;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .featured-card {
+      background: white;
+      color: var(--text);
+      border-radius: 28px;
+      padding: 35px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.2);
+    }
+
+    .featured-card .mini-label {
+      color: var(--blue);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 850;
+    }
+
+    .featured-card h3 {
+      font-size: 30px;
+      margin: 12px 0;
+    }
+
+    .featured-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .fake-button {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      padding: 14px;
+      background: var(--blue);
+      color: white;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+
+    /* LEARNING SYSTEM */
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .learning-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 27px;
+    }
+
+    .learning-item .icon {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .learning-item h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .learning-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+
+    /* FAQ */
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    details p {
+      padding-top: 13px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+
+    /* CTA */
+
+    .cta {
+      background: linear-gradient(135deg,#0066B3,#008BC7);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .cta h2 {
+      font-size: clamp(40px,6vw,64px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      color: #E5F5FF;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 25px;
+      background: white;
+      color: var(--navy);
+      border-radius: 999px;
+      font-weight: 850;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      background: #0B1118;
+      color: white;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr .8fr .8fr;
+      gap: 45px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    footer p,
+    footer a {
+      color: #98A4AE;
+      font-size: 13px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #66727E;
+      padding-top: 25px;
+      font-size: 12px;
+    }
+
+
+    /* MOBILE */
+
+    @media(max-width:1000px) {
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .programs {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .learning-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .level-links a {
+        padding: 15px;
+        font-size: 12px;
+      }
+
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+    🇺🇿 Learn Uzbek step by step · Practical language for real life
+  </div>
+
+
+  <!-- NAVIGATION -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="index.html" class="logo">
+        🇺🇿 Uzbek Pro <span>Academy</span>
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="bookings.html">Bookings</a>
+        <a href="programs.html">Programs</a>
+        <a href="store.html">Store</a>
+        <a href="blog.html">Blog</a>
+        <a href="videos.html">Videos</a>
+        <a href="about.html">About</a>
+
+        <a href="contact.html" class="nav-button">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container hero-content">
+
+        <div class="eyebrow">
+          🇺🇿 Practical Uzbek learning programs
+        </div>
+
+        <h1>
+          Learn Uzbek.<br>
+          <span>One step at a time.</span>
+        </h1>
+
+        <p>
+          Structured learning programs designed for
+          English-speaking learners who want to build
+          real Uzbek skills — from their first words
+          to confident conversation.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEVEL NAV -->
+
+    <div class="level-nav">
+
+      <div class="container level-links">
+
+        <a href="#beginner">🌱 Beginner</a>
+
+        <a href="#intermediate">🗣 Intermediate</a>
+
+        <a href="#advanced">🚀 Advanced</a>
+
+        <a href="#system">📚 Learning System</a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PROGRAMS -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="label">
+            Online Programs
+          </div>
+
+          <h2>
+            Choose your level.
+          </h2>
+
+          <p>
+            Start where you are and progress toward
+            confident, practical Uzbek.
+          </p>
+
+        </div>
+
+
+        <div class="programs">
+
+
+          <!-- BEGINNER -->
+
+          <article class="program" id="beginner">
+
+            <div class="program-top beginner">
+
+              <div class="level">
+                Level 01
+              </div>
+
+              <h3>
+                Uzbek for Complete Beginners
+              </h3>
+
+            </div>
+
+            <div class="program-body">
+
+              <p>
+                Build your foundation from zero and
+                start forming simple Uzbek sentences.
+              </p>
+
+              <ul class="features">
+
+                <li>Essential vocabulary</li>
+                <li>Basic sentence structure</li>
+                <li>Everyday greetings</li>
+                <li>Pronunciation basics</li>
+                <li>Simple conversations</li>
+
+              </ul>
+
+              <span class="coming">
+                COURSE COMING SOON
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- INTERMEDIATE -->
+
+          <article class="program" id="intermediate">
+
+            <div class="program-top intermediate">
+
+              <div class="level">
+                Level 02
+              </div>
+
+              <h3>
+                Practical Uzbek Conversation
+              </h3>
+
+            </div>
+
+            <div class="program-body">
+
+              <p>
+                Expand your vocabulary and become more
+                comfortable expressing yourself in Uzbek.
+              </p>
+
+              <ul class="features">
+
+                <li>Everyday conversations</li>
+                <li>Useful expressions</li>
+                <li>Grammar in context</li>
+                <li>Listening practice</li>
+                <li>Speaking confidence</li>
+
+              </ul>
+
+              <span class="coming">
+                COURSE COMING SOON
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- ADVANCED -->
+
+          <article class="program" id="advanced">
+
+            <div class="program-top advanced">
+
+              <div class="level">
+                Level 03
+              </div>
+
+              <h3>
+                Confident Uzbek
+              </h3>
+
+            </div>
+
+            <div class="program-body">
+
+              <p>
+                Develop natural communication skills and
+                handle more complex Uzbek conversations.
+              </p>
+
+              <ul class="features">
+
+                <li>Advanced vocabulary</li>
+                <li>Natural expressions</li>
+                <li>Long-form conversation</li>
+                <li>Culture & context</li>
+                <li>Fluency development</li>
+
+              </ul>
+
+              <span class="coming">
+                COURSE COMING SOON
+              </span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED -->
+
+    <section class="featured">
+
+      <div class="container featured-grid">
+
+        <div>
+
+          <div class="label">
+            Our approach
+          </div>
+
+          <h2>
+            Less memorization.<br>
+            More real Uzbek.
+          </h2>
+
+          <p>
+            Our programs are designed around practical
+            communication. You won't just learn what words
+            mean — you'll learn how to actually use them.
+          </p>
+
+          <ul class="featured-list">
+
+            <li>Learn useful vocabulary in context</li>
+
+            <li>Practice real-life situations</li>
+
+            <li>Build speaking confidence</li>
+
+            <li>Understand Uzbek culture</li>
+
+            <li>Progress at your own pace</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="featured-card">
+
+          <div class="mini-label">
+            Coming soon
+          </div>
+
+          <h3>
+            Uzbek Foundations
+          </h3>
+
+          <p>
+            A complete beginner-friendly program to help
+            you build a strong Uzbek foundation and start
+            speaking from the beginning.
+          </p>
+
+          <a href="contact.html" class="fake-button">
+            Get Program Updates →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEARNING SYSTEM -->
+
+    <section id="system">
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="label">
+            Learning System
+          </div>
+
+          <h2>
+            What you'll practice.
+          </h2>
+
+          <p>
+            Every program combines the key skills you need
+            to understand and use Uzbek confidently.
+          </p>
+
+        </div>
+
+
+        <div class="learning-grid">
+
+
+          <div class="learning-item">
+
+            <div class="icon">🗣️</div>
+
+            <h3>Speaking</h3>
+
+            <p>
+              Practice expressing yourself naturally.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">👂</div>
+
+            <h3>Listening</h3>
+
+            <p>
+              Train your ear with practical Uzbek.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">📖</div>
+
+            <h3>Vocabulary</h3>
+
+            <p>
+              Learn useful words you can actually use.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">✍️</div>
+
+            <h3>Grammar</h3>
+
+            <p>
+              Understand Uzbek patterns clearly.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">🔊</div>
+
+            <h3>Pronunciation</h3>
+
+            <p>
+              Improve your Uzbek pronunciation.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">🇺🇿</div>
+
+            <h3>Culture</h3>
+
+            <p>
+              Learn the language in its cultural context.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">💬</div>
+
+            <h3>Conversation</h3>
+
+            <p>
+              Build confidence through real situations.
+            </p>
+
+          </div>
+
+
+          <div class="learning-item">
+
+            <div class="icon">🎯</div>
+
+            <h3>Progress</h3>
+
+            <p>
+              Move forward with clear learning goals.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="label">
+            FAQ
+          </div>
+
+          <h2>
+            Questions about the programs?
+          </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+
+          <details>
+
+            <summary>
+              Are these programs suitable for complete beginners?
+            </summary>
+
+            <p>
+              Yes. The beginner program is designed for
+              learners who are starting Uzbek from zero.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Are the programs self-paced?
+            </summary>
+
+            <p>
+              The final format will depend on the individual
+              program. More details will be available when
+              each course launches.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Will I be able to practice speaking?
+            </summary>
+
+            <p>
+              Speaking and practical communication are central
+              to the Uzbek Pro Academy learning approach.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Can I combine a program with 1-on-1 lessons?
+            </summary>
+
+            <p>
+              Yes. Private lessons can complement structured
+              learning programs and provide additional
+              personalized speaking practice.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              When will the programs be available?
+            </summary>
+
+            <p>
+              New programs will be added as they are developed.
+              Check back here or contact Odina for updates.
+            </p>
+
+          </details>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <h2>
+            Want to start now?
+          </h2>
+
+          <p>
+            You don't have to wait for a course.
+            Start learning Uzbek with a personalized
+            1-on-1 lesson today.
+          </p>
+
+          <a href="bookings.html" class="cta-button">
+            Book a 1-on-1 Lesson 🇺🇿 →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <h3>
+            🇺🇿 Uzbek Pro Academy
+          </h3>
+
+          <p>
+            Practical Uzbek learning for English speakers.
+            Learn the language. Connect with the culture.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Learn</h4>
+
+          <a href="bookings.html">1-on-1 Lessons</a>
+          <a href="programs.html">Programs</a>
+          <a href="store.html">Store</a>
+          <a href="videos.html">Videos</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Explore</h4>
+
+          <a href="blog.html">Blog</a>
+          <a href="events.html">Events</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="files.html">Resources</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Connect</h4>
+
+          <a href="about.html">About</a>
+          <a href="instagram.html">Instagram</a>
+          <a href="chat.html">Chat</a>
+          <a href="contact.html">Contact</a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+  </html>
