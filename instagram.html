@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Instagram | Uzbek Pro Academy</title>
+
+<meta name="description" content="Follow Uzbek Pro Academy for practical Uzbek vocabulary, pronunciation, everyday phrases and learning tips.">
+
+<style>
+:root{
+  --blue:#0066B3;
+  --green:#1EB53A;
+  --red:#CE1126;
+  --navy:#0B1724;
+  --text:#17212B;
+  --muted:#66727E;
+  --bg:#F5F8FB;
+  --white:#fff;
+  --border:#E2E8EE;
+  --max:1180px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+
+/* TOP BAR */
+
+.topbar{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:13px;
+}
+
+
+/* NAV */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-size:19px;
+  font-weight:850;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:19px;
+  font-size:13px;
+  font-weight:750;
+}
+
+.nav-links a{
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.nav-button{
+  background:var(--blue);
+  color:#fff!important;
+  padding:11px 18px;
+  border-radius:999px;
+}
+
+
+/* HERO */
+
+.hero{
+  background:#fff;
+  padding:90px 0 75px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-block;
+  background:#EEF7FD;
+  border:1px solid #D9EAF5;
+  color:#004B82;
+  padding:8px 15px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:850;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(48px,7vw,76px);
+  line-height:.98;
+  letter-spacing:-4px;
+  color:var(--navy);
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.instagram-button{
+  display:inline-block;
+  margin-top:30px;
+  background:var(--navy);
+  color:#fff;
+  padding:14px 24px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:850;
+}
+
+
+/* PROFILE */
+
+.profile{
+  padding:65px 0;
+}
+
+.profile-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:35px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+  box-shadow:0 15px 45px rgba(10,35,60,.06);
+}
+
+.profile-logo{
+  width:105px;
+  height:105px;
+  flex:none;
+  border-radius:50%;
+  background:linear-gradient(145deg,#0066B3,#1EB53A);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+  border:5px solid #fff;
+  box-shadow:0 5px 25px rgba(0,0,0,.12);
+}
+
+.profile-info{
+  flex:1;
+}
+
+.profile-info h2{
+  font-size:27px;
+  margin-bottom:3px;
+}
+
+.handle{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.profile-info p{
+  color:var(--muted);
+  font-size:13px;
+  max-width:650px;
+}
+
+.profile-button{
+  background:var(--blue);
+  color:#fff;
+  padding:13px 21px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:850;
+  white-space:nowrap;
+}
+
+
+/* CONTENT */
+
+.content{
+  padding:30px 0 90px;
+}
+
+.section-heading{
+  margin-bottom:35px;
+}
+
+.label{
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:850;
+  margin-bottom:10px;
+}
+
+.section-heading h2{
+  font-size:40px;
+  line-height:1.05;
+  letter-spacing:-2px;
+}
+
+
+/* GRID */
+
+.post-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.post{
+  min-height:360px;
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:27px;
+  transition:.25s;
+}
+
+.post:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(10,35,60,.13);
+}
+
+.post:nth-child(1){
+  background:linear-gradient(145deg,#0066B3,#2A91CE);
+}
+
+.post:nth-child(2){
+  background:linear-gradient(145deg,#1EB53A,#52CC6B);
+}
+
+.post:nth-child(3){
+  background:linear-gradient(145deg,#CE1126,#E75A68);
+}
+
+.post:nth-child(4){
+  background:linear-gradient(145deg,#004B82,#0066B3);
+}
+
+.post:nth-child(5){
+  background:linear-gradient(145deg,#188C35,#1EB53A);
+}
+
+.post:nth-child(6){
+  background:linear-gradient(145deg,#A30D20,#CE1126);
+}
+
+.post-icon{
+  position:absolute;
+  top:27px;
+  left:27px;
+  font-size:52px;
+}
+
+.post-tag{
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  opacity:.85;
+}
+
+.post h3{
+  font-size:21px;
+  line-height:1.2;
+  margin-bottom:7px;
+}
+
+.post p{
+  font-size:12px;
+  opacity:.9;
+}
+
+
+/* CONTENT IDEAS */
+
+.ideas{
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:90px 0;
+}
+
+.idea-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.idea{
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:27px 23px;
+  background:#FAFCFD;
+}
+
+.idea-icon{
+  font-size:31px;
+  margin-bottom:13px;
+}
+
+.idea h3{
+  font-size:17px;
+  margin-bottom:7px;
+}
+
+.idea p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* CTA */
+
+.cta{
+  padding:95px 0;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:45px;
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin-bottom:17px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+.cta-button{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:850;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#0B1118;
+  color:#fff;
+  padding:60px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr .8fr;
+  gap:45px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer h4{
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+footer p,
+footer a{
+  color:#96A3AE;
+  font-size:13px;
+}
+
+footer a{
+  display:block;
+  margin-bottom:9px;
+}
+
+footer a:hover{
+  color:#fff;
+}
+
+.copyright{
+  text-align:center;
+  color:#65717C;
+  padding-top:25px;
+  font-size:12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .nav-links a:not(.nav-button){
+    display:none;
+  }
+
+  .profile-card{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .profile-info p{
+    margin:auto;
+  }
+
+  .post-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .idea-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:65px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-3px;
+  }
+
+  .profile{
+    padding:45px 0;
+  }
+
+  .post-grid{
+    grid-template-columns:1fr;
+  }
+
+  .idea-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-heading h2{
+    font-size:33px;
+  }
+
+  .cta h2{
+    font-size:37px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="topbar">
+🇺🇿 Learn Uzbek • Follow the journey • Speak with confidence
+</div>
+
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+🇺🇿 Uzbek Pro <span>Academy</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="bookings.html">Bookings</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="blog.html">Blog</a>
+<a href="videos.html">Videos</a>
+<a href="events.html">Events</a>
+<a href="about.html">About</a>
+
+<a href="contact.html" class="nav-button">
+Contact
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+📱 Uzbek Pro Academy on Instagram
+</div>
+
+<h1>
+Learn Uzbek.<br>
+<span>One short video at a time.</span>
+</h1>
+
+<p>
+Follow Uzbek Pro Academy for practical vocabulary,
+pronunciation tips, everyday phrases, speaking practice
+and simple Uzbek lessons made for English-speaking learners.
+</p>
+
+<a href="https://www.instagram.com/uzbekproacademy?igsi=d280djU4YWp1NWgx" target="_blank" class="instagram-button">
+Follow on Instagram →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PROFILE -->
+
+<section class="profile">
+
+<div class="container">
+
+<div class="profile-card">
+
+<div class="profile-logo">
+🇺🇿
+</div>
+
+<div class="profile-info">
+
+<h2>
+Uzbek Pro Academy
+</h2>
+
+<div class="handle">
+@uzbekproacademy
+</div>
+
+<p>
+Practical Uzbek for English speakers. Learn useful words,
+real expressions, pronunciation and conversational Uzbek
+through short, easy-to-follow content.
+</p>
+
+</div>
+
+<a href="https://www.instagram.com/" target="_blank" class="profile-button">
+View Instagram →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTENT GRID -->
+
+<section class="content">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+What you'll find
+</div>
+
+<h2>
+Practical Uzbek content.
+</h2>
+
+</div>
+
+
+<div class="post-grid">
+
+
+<div class="post">
+
+<div class="post-icon">
+🗣️
+</div>
+
+<div class="post-tag">
+Speaking
+</div>
+
+<h3>
+Everyday Uzbek Phrases
+</h3>
+
+<p>
+Learn phrases you can actually use in real conversations.
+</p>
+
+</div>
+
+
+<div class="post">
+
+<div class="post-icon">
+📚
+</div>
+
+<div class="post-tag">
+Vocabulary
+</div>
+
+<h3>
+Useful Uzbek Words
+</h3>
+
+<p>
+Build your vocabulary with simple, practical examples.
+</p>
+
+</div>
+
+
+<div class="post">
+
+<div class="post-icon">
+🔊
+</div>
+
+<div class="post-tag">
+Pronunciation
+</div>
+
+<h3>
+Speak More Naturally
+</h3>
+
+<p>
+Improve pronunciation and learn how Uzbek sounds in real life.
+</p>
+
+</div>
+
+
+<div class="post">
+
+<div class="post-icon">
+🇺🇿
+</div>
+
+<div class="post-tag">
+Culture
+</div>
+
+<h3>
+Language & Culture
+</h3>
+
+<p>
+Discover the culture behind Uzbek words and expressions.
+</p>
+
+</div>
+
+
+<div class="post">
+
+<div class="post-icon">
+🎯
+</div>
+
+<div class="post-tag">
+Beginner
+</div>
+
+<h3>
+Start Uzbek From Zero
+</h3>
+
+<p>
+Simple lessons for learners who are completely new to Uzbek.
+</p>
+
+</div>
+
+
+<div class="post">
+
+<div class="post-icon">
+💬
+</div>
+
+<div class="post-tag">
+Conversation
+</div>
+
+<h3>
+Learn to Respond
+</h3>
+
+<p>
+Practice useful responses instead of only memorizing words.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTENT IDEAS -->
+
+<section class="ideas">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+Coming to Instagram
+</div>
+
+<h2>
+What we'll be sharing.
+</h2>
+
+</div>
+
+
+<div class="idea-grid">
+
+
+<div class="idea">
+
+<div class="idea-icon">
+🎥
+</div>
+
+<h3>
+Short Lessons
+</h3>
+
+<p>
+Quick Uzbek lessons that you can watch anywhere.
+</p>
+
+</div>
+
+
+<div class="idea">
+
+<div class="idea-icon">
+🇺🇿
+</div>
+
+<h3>
+Uzbek of the Day
+</h3>
+
+<p>
+One useful Uzbek word or phrase at a time.
+</p>
+
+</div>
+
+
+<div class="idea">
+
+<div class="idea-icon">
+🗣️
+</div>
+
+<h3>
+Speaking Challenges
+</h3>
+
+<p>
+Small challenges designed to get you speaking.
+</p>
+
+</div>
+
+
+<div class="idea">
+
+<div class="idea-icon">
+💡
+</div>
+
+<h3>
+Learning Tips
+</h3>
+
+<p>
+Simple strategies for remembering and using Uzbek.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Want more than short videos?
+</h2>
+
+<p>
+Take your Uzbek further with a personalized 1-on-1 lesson.
+</p>
+
+<a href="bookings.html" class="cta-button">
+Book a 1-on-1 Lesson →
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+🇺🇿 Uzbek Pro Academy
+</h3>
+
+<p>
+Practical Uzbek lessons and resources for
+English-speaking learners.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Learn</h4>
+
+<a href="bookings.html">1-on-1 Lessons</a>
+<a href="programs.html">Programs</a>
+<a href="store.html">Store</a>
+<a href="videos.html">Videos</a>
+
+</div>
+
+
+<div>
+
+<h4>Explore</h4>
+
+<a href="blog.html">Learning Hub</a>
+<a href="events.html">Events</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="files.html">Resources</a>
+
+</div>
+
+
+<div>
+
+<h4>Connect</h4>
+
+<a href="about.html">About</a>
+<a href="instagram.html">Instagram</a>
+<a href="chat.html">Chat</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+© 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+  </html>
