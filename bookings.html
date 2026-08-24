@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Book a Lesson | Uzbek Pro Academy</title>
+
+  <meta name="description"
+        content="Book a personalized 1-on-1 Uzbek lesson with Odina at Uzbek Pro Academy. Learn practical, conversational Uzbek for real life.">
+
+  <meta name="theme-color" content="#0066B3">
+
+  <style>
+    :root {
+      --blue: #0066B3;
+      --blue-dark: #004C87;
+      --green: #1EB53A;
+      --red: #CE1126;
+      --navy: #0B1724;
+      --text: #17212B;
+      --muted: #66727E;
+      --light: #F5F8FB;
+      --white: #FFFFFF;
+      --border: #E4EAF0;
+      --shadow: 0 20px 60px rgba(15, 42, 67, .10);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 850;
+      letter-spacing: -.5px;
+      white-space: nowrap;
+    }
+
+    .logo-blue {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .nav-links a {
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-button {
+      background: var(--blue);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 999px;
+    }
+
+    .nav-button:hover {
+      background: var(--blue-dark);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: white;
+      padding: 105px 0 90px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(0,102,179,.06);
+      border-radius: 50%;
+      top: -260px;
+      right: -120px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #F1F7FC;
+      border: 1px solid #DCEAF4;
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: .98;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+      color: var(--navy);
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 23px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 12px 30px rgba(0,102,179,.22);
+    }
+
+    .primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* HERO CARD */
+
+    .lesson-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-card-inner {
+      border-radius: 23px;
+      padding: 35px;
+      background:
+        linear-gradient(
+          145deg,
+          #0066B3,
+          #078AC8 52%,
+          #1EB53A
+        );
+      color: white;
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lesson-card-inner::before {
+      content: "🇺🇿";
+      position: absolute;
+      right: 25px;
+      top: 20px;
+      font-size: 90px;
+    }
+
+    .lesson-card-inner::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border: 40px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      right: -80px;
+      bottom: -80px;
+    }
+
+    .lesson-label {
+      position: relative;
+      z-index: 2;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      opacity: .85;
+    }
+
+    .lesson-card h2 {
+      position: relative;
+      z-index: 2;
+      font-size: 36px;
+      line-height: 1.05;
+      margin: 18px 0;
+      max-width: 350px;
+    }
+
+    .lesson-card p {
+      position: relative;
+      z-index: 2;
+      max-width: 350px;
+      color: rgba(255,255,255,.88);
+    }
+
+    .price {
+      position: absolute;
+      z-index: 3;
+      bottom: 30px;
+      left: 35px;
+      font-size: 15px;
+    }
+
+    .price strong {
+      display: block;
+      font-size: 34px;
+    }
+
+    /* =========================
+       TRUST STRIP
+    ========================= */
+
+    .trust {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    .trust-item {
+      padding: 24px 15px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 850;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(37px,5vw,56px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      transition: .25s;
+    }
+
+    .benefit:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #EFF7FC;
+      border-radius: 16px;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .benefit h3 {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       HOW IT WORKS
+    ========================= */
+
+    .steps-section {
+      background: white;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 30px;
+      counter-reset: steps;
+    }
+
+    .step {
+      position: relative;
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .step-number {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* =========================
+       BOOKING AREA
+    ========================= */
+
+    .booking-section {
+      background: #EEF6FB;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .booking-copy h2 {
+      font-size: clamp(38px,5vw,56px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .booking-copy p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      margin-bottom: 12px;
+      font-weight: 650;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .booking-panel {
+      background: white;
+      border-radius: 28px;
+      padding: 38px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .booking-panel h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .booking-panel > p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .lesson-option {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+
+    .lesson-option strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .lesson-option span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .booking-panel .button {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    details p {
+      color: var(--muted);
+      padding-top: 14px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background:
+        linear-gradient(135deg,#0066B3,#008BC7);
+      color: white;
+    }
+
+    .cta-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(40px,6vw,64px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      color: #E8F6FF;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .cta .button {
+      background: white;
+      color: var(--navy);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0B1118;
+      color: white;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr .8fr .8fr;
+      gap: 45px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer h4 {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    footer p,
+    footer a {
+      color: #98A4AE;
+      font-size: 13px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #66727E;
+      padding-top: 24px;
+      font-size: 12px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width: 1000px) {
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero-grid,
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .trust-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media(max-width: 600px) {
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .lesson-card-inner {
+        min-height: 360px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .trust-item:last-child {
+        border-bottom: none;
+      }
+
+      .booking-panel {
+        padding: 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+    🇺🇿 Practical Uzbek for English speakers · Learn the language. Connect with the culture.
+  </div>
+
+
+  <!-- NAVIGATION -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="index.html" class="logo">
+        🇺🇿 Uzbek Pro <span class="logo-blue">Academy</span>
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="bookings.html">Bookings</a>
+        <a href="programs.html">Programs</a>
+        <a href="store.html">Store</a>
+        <a href="blog.html">Blog</a>
+        <a href="videos.html">Videos</a>
+        <a href="about.html">About</a>
+
+        <a href="contact.html" class="nav-button">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            🇺🇿 1-on-1 Uzbek lessons with Odina
+          </div>
+
+          <h1>
+            Learn Uzbek.<br>
+            <span>Speak it with confidence.</span>
+          </h1>
+
+          <p class="hero-description">
+            Personalized Uzbek lessons for English-speaking
+            learners who want to understand, speak and use
+            real Uzbek in everyday life.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#booking" class="button primary">
+              Book Your Lesson →
+            </a>
+
+            <a href="programs.html" class="button secondary">
+              Explore Programs
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="lesson-card">
+
+          <div class="lesson-card-inner">
+
+            <div class="lesson-label">
+              Your private Uzbek classroom
+            </div>
+
+            <h2>
+              Real Uzbek.<br>
+              Real conversations.
+            </h2>
+
+            <p>
+              No unnecessary memorization.
+              Focus on language you can actually use.
+            </p>
+
+            <div class="price">
+              <span>1-on-1 lesson</span>
+              <strong>Personalized</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <div class="trust">
+
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <strong>👩‍🏫 1-on-1</strong>
+          <span>Personalized learning</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>🗣 Conversation</strong>
+          <span>Speaking-focused</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>🌎 English-friendly</strong>
+          <span>Beginner welcoming</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>🎯 Goal-based</strong>
+          <span>Built around you</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BENEFITS -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="label">
+            Why private lessons?
+          </div>
+
+          <h2>
+            A lesson built around you.
+          </h2>
+
+          <p>
+            Your Uzbek journey doesn't have to look like
+            everyone else's.
+          </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+          <div class="benefit">
+
+            <div class="icon">🗣️</div>
+
+            <h3>Speak from day one</h3>
+
+            <p>
+              Practice useful phrases and real conversations
+              instead of only memorizing vocabulary.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">🎯</div>
+
+            <h3>Your goals come first</h3>
+
+            <p>
+              Learning for travel, family, relationships,
+              culture or personal interest? We adapt.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">📈</div>
+
+            <h3>Progress at your pace</h3>
+
+            <p>
+              Lessons are adjusted to your level and
+              the areas where you need the most practice.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">📚</div>
+
+            <h3>Useful vocabulary</h3>
+
+            <p>
+              Learn words and expressions you can immediately
+              use in everyday conversations.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">🧠</div>
+
+            <h3>Clear explanations</h3>
+
+            <p>
+              Grammar and language patterns explained
+              simply and practically.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">🇺🇿</div>
+
+            <h3>Language + culture</h3>
+
+            <p>
+              Understand not only what Uzbek means,
+              but how people actually use it.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="steps-section">
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="label">
+            Simple process
+          </div>
+
+          <h2>
+            Your first lesson is easy.
+          </h2>
+
+          <p>
+            No complicated setup. Just tell us what you
+            want to learn and we'll take it from there.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="step-number">
+              01 — TELL US YOUR GOAL
+            </div>
+
+            <h3>
+              What do you want to achieve?
+            </h3>
+
+            <p>
+              Tell Odina why you're learning Uzbek,
+              your current level and what you'd like
+              to be able to do.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              02 — BOOK YOUR LESSON
+            </div>
+
+            <h3>
+              Choose your lesson time.
+            </h3>
+
+            <p>
+              We'll arrange a convenient time for your
+              private 1-on-1 Uzbek lesson.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              03 — START SPEAKING
+            </div>
+
+            <h3>
+              Learn and practice.
+            </h3>
+
+            <p>
+              Start using Uzbek through practical examples,
+              guided conversation and personalized practice.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BOOKING -->
+
+    <section class="booking-section" id="booking">
+
+      <div class="container booking-grid">
+
+
+        <div class="booking-copy">
+
+          <div class="label">
+            Book a lesson
+          </div>
+
+          <h2>
+            Your Uzbek journey starts here.
+          </h2>
+
+          <p>
+            Ready to learn Uzbek in a way that actually
+            feels useful?
+          </p>
+
+          <ul class="check-list">
+
+            <li>Private 1-on-1 instruction</li>
+
+            <li>Personalized lesson content</li>
+
+            <li>Speaking and conversation practice</li>
+
+            <li>Beginner-friendly approach</li>
+
+            <li>Lessons adapted to your goals</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="booking-panel">
+
+          <h3>
+            Choose your starting point
+          </h3>
+
+          <p>
+            Contact Odina to discuss your lesson.
+          </p>
+
+
+          <div class="lesson-option">
+
+            <strong>
+              🌱 Complete Beginner
+            </strong>
+
+            <span>
+              You are starting Uzbek from zero.
+            </span>
+
+          </div>
+
+
+          <div class="lesson-option">
+
+            <strong>
+              🗣️ Some Uzbek Already
+            </strong>
+
+            <span>
+              You know some words and want to speak more.
+            </span>
+
+          </div>
+
+
+          <div class="lesson-option">
+
+            <strong>
+              🎯 Specific Goal
+            </strong>
+
+            <span>
+              Travel, family, relationships, culture or another goal.
+            </span>
+
+          </div>
+
+
+          <a
+            href="mailto:odinabakhramovna@gmail.com?subject=Uzbek%20Pro%20Academy%20-%201-on-1%20Lesson"
+            class="button primary"
+          >
+            Contact Odina →
+          </a>
+
+          <div class="note">
+            You'll be able to add an automatic booking
+            calendar here later.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="label">
+            FAQ
+          </div>
+
+          <h2>
+            Questions before you start?
+          </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+          <details>
+
+            <summary>
+              Do I need to know Uzbek before my first lesson?
+            </summary>
+
+            <p>
+              No. Complete beginners are welcome.
+              Lessons can start from the very basics.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Are the lessons 1-on-1?
+            </summary>
+
+            <p>
+              Yes. Uzbek Pro Academy currently focuses
+              on personalized private lessons.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              What will we study?
+            </summary>
+
+            <p>
+              Lessons can include speaking, vocabulary,
+              pronunciation, grammar and practical
+              everyday Uzbek depending on your goals.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Can I learn Uzbek for a specific purpose?
+            </summary>
+
+            <p>
+              Absolutely. Lessons can be adapted for travel,
+              family communication, relationships, cultural
+              connection or personal interest.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              How do I book?
+            </summary>
+
+            <p>
+              Contact Odina using the booking button above.
+              An automatic booking system can be connected
+              to this page later.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <h2>
+            Ready to speak Uzbek?
+          </h2>
+
+          <p>
+            Start with one personalized lesson and discover
+            how practical Uzbek learning can be.
+          </p>
+
+          <a
+            href="mailto:odinabakhramovna@gmail.com?subject=I%20want%20to%20learn%20Uzbek"
+            class="button"
+          >
+            Start Your Uzbek Journey 🇺🇿 →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h3>
+            🇺🇿 Uzbek Pro Academy
+          </h3>
+
+          <p>
+            Practical Uzbek lessons for English speakers.
+            Learn the language. Connect with the culture.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Learn</h4>
+
+          <a href="bookings.html">1-on-1 Lessons</a>
+          <a href="programs.html">Programs</a>
+          <a href="store.html">Store</a>
+          <a href="videos.html">Videos</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Explore</h4>
+
+          <a href="blog.html">Blog</a>
+          <a href="events.html">Events</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="files.html">Resources</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Connect</h4>
+
+          <a href="about.html">About</a>
+          <a href="instagram.html">Instagram</a>
+          <a href="chat.html">Chat</a>
+          <a href="contact.html">Contact</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Uzbek Pro Academy · Learn Uzbek with Odina 🇺🇿
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+                      </html>
