@@ -9,21 +9,21 @@
   <meta name="description"
         content="Book a personalized 1-on-1 Uzbek lesson with Odina at Uzbek Pro Academy. Learn practical, conversational Uzbek for real life.">
 
-  <meta name="theme-color" content="#0066B3">
+  <meta name="theme-color" content="#0B2235">
 
   <style>
     :root {
-      --blue: #0066B3;
-      --blue-dark: #004C87;
-      --green: #1EB53A;
+      --blue: #0F3048;
+      --blue-dark: #0B2235;
+      --green: #C6A45F;
       --red: #CE1126;
-      --navy: #0B1724;
+      --navy: #0B2235;
       --text: #17212B;
       --muted: #66727E;
-      --light: #F5F8FB;
+      --light: #FAF9F5;
       --white: #FFFFFF;
-      --border: #E4EAF0;
-      --shadow: 0 20px 60px rgba(15, 42, 67, .10);
+      --border: #E4E7EC;
+      --shadow: 0 20px 60px rgba(11,34,53,.10);
       --radius: 24px;
       --max: 1180px;
     }
@@ -56,6 +56,11 @@
       color: inherit;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
       width: min(92%, var(--max));
       margin: auto;
@@ -67,7 +72,7 @@
 
     .topbar {
       background: var(--navy);
-      color: white;
+      color: #E8D5A3;
       text-align: center;
       padding: 9px 15px;
       font-size: 13px;
@@ -79,7 +84,7 @@
     ========================= */
 
     header {
-      background: rgba(255,255,255,.96);
+      background: rgba(250,249,245,.96);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -96,14 +101,21 @@
     }
 
     .logo {
-      font-size: 19px;
-      font-weight: 850;
-      letter-spacing: -.5px;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: auto;
+      height: 46px;
+      max-width: 180px;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     .logo-blue {
-      color: var(--blue);
+      color: var(--green);
     }
 
     .nav-links {
@@ -119,18 +131,19 @@
     }
 
     .nav-links a:hover {
-      color: var(--blue);
+      color: var(--green);
     }
 
     .nav-button {
-      background: var(--blue);
-      color: white !important;
+      background: var(--green);
+      color: var(--navy) !important;
       padding: 11px 18px;
       border-radius: 999px;
+      font-weight: 800;
     }
 
     .nav-button:hover {
-      background: var(--blue-dark);
+      background: #E8D5A3;
     }
 
     /* =========================
@@ -140,7 +153,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      background: white;
+      background: var(--light);
       padding: 105px 0 90px;
     }
 
@@ -149,7 +162,7 @@
       position: absolute;
       width: 500px;
       height: 500px;
-      background: rgba(0,102,179,.06);
+      background: rgba(198,164,95,.10);
       border-radius: 50%;
       top: -260px;
       right: -120px;
@@ -170,8 +183,8 @@
       gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: #F1F7FC;
-      border: 1px solid #DCEAF4;
+      background: #F3EFE5;
+      border: 1px solid #E8D5A3;
       color: var(--blue-dark);
       font-size: 12px;
       font-weight: 800;
@@ -187,7 +200,7 @@
     }
 
     .hero h1 span {
-      color: var(--blue);
+      color: var(--green);
     }
 
     .hero-description {
@@ -214,23 +227,24 @@
     }
 
     .primary {
-      background: var(--blue);
-      color: white;
-      box-shadow: 0 12px 30px rgba(0,102,179,.22);
+      background: var(--green);
+      color: var(--navy);
+      box-shadow: 0 12px 30px rgba(198,164,95,.22);
     }
 
     .primary:hover {
-      background: var(--blue-dark);
+      background: #E8D5A3;
       transform: translateY(-2px);
     }
 
     .secondary {
-      background: white;
+      background: var(--white);
       border: 1px solid var(--border);
+      color: var(--navy);
     }
 
     .secondary:hover {
-      border-color: var(--blue);
+      border-color: var(--green);
       color: var(--blue);
     }
 
@@ -250,9 +264,9 @@
       background:
         linear-gradient(
           145deg,
-          #0066B3,
-          #078AC8 52%,
-          #1EB53A
+          #0B2235,
+          #0F3048 58%,
+          #C6A45F
         );
       color: white;
       min-height: 420px;
@@ -373,7 +387,7 @@
     }
 
     .label {
-      color: var(--blue);
+      color: var(--green);
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 11px;
@@ -423,7 +437,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #EFF7FC;
+      background: #F3EFE5;
       border-radius: 16px;
       font-size: 25px;
       margin-bottom: 20px;
@@ -462,7 +476,7 @@
     }
 
     .step-number {
-      color: var(--blue);
+      color: var(--green);
       font-size: 13px;
       font-weight: 900;
       letter-spacing: 1px;
@@ -484,7 +498,7 @@
     ========================= */
 
     .booking-section {
-      background: #EEF6FB;
+      background: #F3EFE5;
     }
 
     .booking-grid {
@@ -603,7 +617,7 @@
 
     .cta {
       background:
-        linear-gradient(135deg,#0066B3,#008BC7);
+        linear-gradient(135deg,#0B2235,#0F3048);
       color: white;
     }
 
@@ -621,13 +635,13 @@
     }
 
     .cta p {
-      color: #E8F6FF;
+      color: #E8D5A3;
       font-size: 17px;
       margin-bottom: 30px;
     }
 
     .cta .button {
-      background: white;
+      background: var(--green);
       color: var(--navy);
     }
 
@@ -636,7 +650,7 @@
     ========================= */
 
     footer {
-      background: #0B1118;
+      background: #0B1724;
       color: white;
       padding: 60px 0 25px;
     }
@@ -670,7 +684,7 @@
     }
 
     footer a:hover {
-      color: white;
+      color: var(--green);
     }
 
     .copyright {
@@ -779,8 +793,9 @@
 
     <div class="container nav">
 
-      <a href="index.html" class="logo">
-        🇺🇿 Uzbek Pro <span class="logo-blue">Academy</span>
+      <a href="index.html" class="logo" aria-label="Uzbek Pro Academy">
+        <img src="IMG_20260824_141056_362.jpg"
+             alt="Uzbek Pro Academy logo">
       </a>
 
       <nav class="nav-links">
@@ -1156,7 +1171,7 @@
           </h3>
 
           <p>
-            Contact Odina to discuss your lesson.
+            Select the option that best describes your learning goal.
           </p>
 
 
@@ -1200,15 +1215,16 @@
 
 
           <a
-            href="mailto:odinabakhramovna@gmail.com?subject=Uzbek%20Pro%20Academy%20-%201-on-1%20Lesson"
+            href="https://calendly.com/odinabakhramovna/uzbek-trial-lesson"
+            target="_blank"
+            rel="noopener"
             class="button primary"
           >
-            Contact Odina →
+            Book Your Trial Lesson →
           </a>
 
           <div class="note">
-            You'll be able to add an automatic booking
-            calendar here later.
+            Choose a convenient time through Calendly.
           </div>
 
         </div>
@@ -1304,9 +1320,8 @@
             </summary>
 
             <p>
-              Contact Odina using the booking button above.
-              An automatic booking system can be connected
-              to this page later.
+              Click the booking button and choose a convenient
+              time through Calendly.
             </p>
 
           </details>
@@ -1336,10 +1351,12 @@
           </p>
 
           <a
-            href="mailto:odinabakhramovna@gmail.com?subject=I%20want%20to%20learn%20Uzbek"
+            href="https://calendly.com/odinabakhramovna/uzbek-trial-lesson"
+            target="_blank"
+            rel="noopener"
             class="button"
           >
-            Start Your Uzbek Journey 🇺🇿 →
+            Book Your Trial Lesson 🇺🇿 →
           </a>
 
         </div>
@@ -1420,4 +1437,4 @@
   </footer>
 
 </body>
-                      </html>
+</html>
