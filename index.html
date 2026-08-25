@@ -1,804 +1,1793 @@
-[25.08.2026 9:49] -: <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================================================
+   UZBEK PRO ACADEMY
+   GLOBAL DESIGN SYSTEM
+   Navy + Gold + Ivory
+   ========================================================= */
+
+:root {
+  --navy: #0F3048;
+  --deep-navy: #0B2235;
+  --gold: #C6A45F;
+  --soft-gold: #E8D5A3;
+  --ivory: #FAF9F5;
+  --white: #FFFFFF;
+  --text: #344054;
+
+  --line: rgba(15, 48, 72, 0.12);
+  --line-dark: rgba(250, 249, 245, 0.16);
+
+  --shadow:
+    0 20px 60px -25px rgba(11, 34, 53, 0.28);
+
+  --radius: 18px;
+  --max: 1180px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--text);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 1rem;
+  line-height: 1.65;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
 
-  <title>Uzbek Pro Academy | Learn Uzbek Online</title>
-  <meta
-    name="description"
-    content="Learn Uzbek online with personalized, practical lessons from Uzbek Pro Academy."
-  >
-
-  <link rel="icon" href="assets/logo.jpg">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
 
-  <link rel="stylesheet" href="styles.css">
-</head>
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 
-<body>
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.55em;
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    Personalized Uzbek lessons · Learn online from anywhere
-  </div>
+  font-family:
+    "Fraunces",
+    Georgia,
+    serif;
 
+  color: var(--deep-navy);
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container nav-row">
+  font-weight: 600;
+  line-height: 1.08;
 
-      <a href="index.html" class="brand" aria-label="Uzbek Pro Academy home">
-        <img
-          src="assets/logo.jpg"
-          alt="Uzbek Pro Academy logo"
-        >
+  letter-spacing: -0.015em;
+}
 
-        <span class="brand-word">
-          Uzbek Pro <span>Academy</span>
-        </span>
-      </a>
+h1 {
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-weight: 600;
+}
 
+h2 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul>
+h3 {
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+}
 
-          <li>
-            <a href="programs.html">Programs</a>
-          </li>
+p {
+  margin: 0 0 1em;
+}
 
-          <li>
-            <a href="videos.html">Videos</a>
-          </li>
+.lede {
+  max-width: 48ch;
 
-          <li>
-            <a href="blog.html">Blog</a>
-          </li>
+  color: var(--text);
 
-          <li>
-            <a href="store.html">Store</a>
-          </li>
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
 
-          <li>
-            <a href="events.html">Events</a>
-          </li>
 
-          <li>
-            <a href="portfolio.html">Portfolio</a>
-          </li>
+/* =========================================================
+   LAYOUT
+   ========================================================= */
 
-          <li>
-            <a href="about.html">About</a>
-          </li>
+.container {
+  width: 100%;
+  max-width: var(--max);
 
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+  margin: 0 auto;
 
-          <li class="nav-cta-mobile">
-            <a href="bookings.html" class="btn btn-gold">
-              Book a Trial
-            </a>
-          </li>
+  padding-left: 32px;
+  padding-right: 32px;
+}
 
-        </ul>
-      </nav>
+section {
+  padding: 96px 0;
+}
 
+.section-white {
+  background: var(--white);
+}
 
-      <div class="nav-cta">
-        <a href="bookings.html" class="btn btn-gold">
-          Book a Trial
-        </a>
-      </div>
+.section-ivory {
+  background: var(--ivory);
+}
 
+@media (max-width: 720px) {
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  section {
+    padding: 68px 0;
+  }
 
-    </div>
-  </header>
+  .container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
+}
 
-  <main>
 
-    <!-- HERO -->
-    <section class="hero-home">
+/* =========================================================
+   TOP BAR
+   ========================================================= */
 
-      <div class="container hero-grid">
+.topbar {
+  background: var(--deep-navy);
+  color: var(--soft-gold);
 
-        <div class="hero-content reveal">
+  text-align: center;
 
-          <p class="eyebrow">
-            Uzbek Pro Academy
-          </p>
+  padding: 8px 20px;
 
-          <h1>
-            Learn Uzbek.<br>
-            <span>Speak with confidence.</span>
-          </h1>
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
 
-          <p class="lede">
-            Practical, personalized Uzbek lessons designed to help you
-            communicate naturally, build confidence, and connect with
-            Uzbek language and culture.
-          </p>
 
-          <div class="hero-actions">
+/* =========================================================
+   HEADER
+   ========================================================= */
 
-            <a href="bookings.html" class="btn btn-gold btn-large">
-              Book a Trial — $10
-            </a>
+.site-header {
+  position: sticky;
+  top: 0;
 
-            <a href="programs.html" class="btn btn-outline">
-              Explore Programs
-            </a>
+  z-index: 100;
 
-          </div>
+  background:
+    rgba(250, 249, 245, 0.94);
 
-          <div class="hero-note">
-            <span></span>
-            No long-term commitment · Learn online from anywhere
-          </div>
+  backdrop-filter: blur(14px);
 
-        </div>
+  border-bottom:
+    1px solid var(--line);
+}
 
+.nav-row {
+  min-height: 78px;
 
-        <div class="hero-card reveal">
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-          <div class="hero-card-top">
+  gap: 24px;
+}
 
-            <div class="hero-mark">
-              UZ
-            </div>
+.brand {
+  display: flex;
+  align-items: center;
 
-            <div>
-              <strong>Personalized Uzbek Learning</strong>
-              <small>Built around your goals</small>
-            </div>
+  gap: 11px;
 
-          </div>
+  flex-shrink: 0;
+}
 
+.brand img {
+  width: 46px;
+  height: 46px;
 
-          <div class="gold-line"></div>
+  border-radius: 50%;
 
+  object-fit: cover;
+}
 
-          <ul class="feature-list">
-[25.08.2026 9:49] -: <li>
-              <span>01</span>
-              <div>
-                <strong>Practical language</strong>
-                <p>Learn Uzbek you can actually use.</p>
-              </div>
-            </li>
+.brand-word {
+  font-family: "Fraunces", Georgia, serif;
 
-            <li>
-              <span>02</span>
-              <div>
-                <strong>Personal attention</strong>
-                <p>Lessons adapted to your level and goals.</p>
-              </div>
-            </li>
+  font-size: 1.16rem;
+  font-weight: 600;
 
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Real communication</strong>
-                <p>Build confidence through useful conversation.</p>
-              </div>
-            </li>
+  color: var(--deep-navy);
+}
 
-          </ul>
+.brand-word span {
+  color: var(--gold);
+}
 
-        </div>
+.main-nav ul {
+  display: flex;
+  align-items: center;
 
-      </div>
+  gap: 25px;
+}
 
+.main-nav a {
+  position: relative;
 
-      <div class="hero-bottom-line"></div>
+  padding: 6px 0;
 
-    </section>
+  color: var(--navy);
 
+  font-size: 0.86rem;
+  font-weight: 600;
+}
 
-    <!-- FOUR KEY POINTS -->
-    <section class="key-points-section">
+.main-nav a::after {
+  content: "";
 
-      <div class="container">
+  position: absolute;
 
-        <div class="key-points">
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-          <div class="key-point reveal">
-            <strong>1-on-1</strong>
-            <span>Personal attention</span>
-          </div>
+  height: 1.5px;
 
-          <div class="key-point reveal">
-            <strong>Practical</strong>
-            <span>Real communication</span>
-          </div>
+  background: var(--gold);
 
-          <div class="key-point reveal">
-            <strong>Online</strong>
-            <span>Learn from anywhere</span>
-          </div>
+  transform:
+    scaleX(0);
 
-          <div class="key-point reveal">
-            <strong>Personalized</strong>
-            <span>Built around your goals</span>
-          </div>
+  transform-origin: left;
 
-        </div>
+  transition:
+    transform 0.25s ease;
+}
 
-      </div>
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
 
-    </section>
+.nav-cta-mobile {
+  display: none;
+}
 
 
-    <!-- WHY US -->
-    <section class="section-white">
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
-      <div class="container">
+.btn {
+  display: inline-flex;
 
-        <div class="section-heading centered reveal">
+  align-items: center;
+  justify-content: center;
 
-          <p class="eyebrow">
-            Why Uzbek Pro Academy
-          </p>
+  gap: 8px;
 
-          <h2>
-            Uzbek that you can actually use.
-          </h2>
+  min-height: 48px;
 
-          <p class="lede">
-            Learn through practical communication, personalized guidance,
-            and meaningful cultural context.
-          </p>
+  padding:
+    12px 24px;
 
-        </div>
+  border:
+    1px solid transparent;
 
+  border-radius: 999px;
 
-        <div class="grid grid-3">
+  cursor: pointer;
 
-          <article class="card feature-card reveal">
+  white-space: nowrap;
 
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 4h16v12H8l-4 4V4z"/>
-              </svg>
-            </div>
+  font-size: 0.92rem;
+  font-weight: 700;
 
-            <span class="card-number">01</span>
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
-            <h3>Real Conversation</h3>
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-            <p>
-              Focus on useful expressions and language you can
-              actually use in everyday conversations.
-            </p>
+.btn-large {
+  min-height: 54px;
 
-          </article>
+  padding:
+    14px 28px;
 
+  font-size: 0.96rem;
+}
 
-          <article class="card feature-card reveal">
+.btn-gold {
+  background: var(--gold);
+  color: var(--deep-navy);
+}
 
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 3v18M3 12h18"/>
-              </svg>
-            </div>
+.btn-gold:hover {
+  background: #d1b16f;
 
-            <span class="card-number">02</span>
+  box-shadow:
+    0 14px 30px -15px
+    rgba(198, 164, 95, 0.7);
+}
 
-            <h3>Personalized Lessons</h3>
+.btn-navy {
+  background: var(--navy);
+  color: var(--white);
+}
 
-            <p>
-              Lessons can be adapted to your level, goals,
-              interests, and learning pace.
-            </p>
+.btn-navy:hover {
+  background: var(--deep-navy);
+}
 
-          </article>
+.btn-outline {
+  background: transparent;
 
+  border-color: var(--navy);
 
-          <article class="card feature-card reveal">
+  color: var(--navy);
+}
 
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3l8 4-8 4-8-4 8-4z"/>
-                <path d="M4 11l8 4 8-4"/>
-                <path d="M4 15l8 4 8-4"/>
-              </svg>
-            </div>
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+}
 
-            <span class="card-number">03</span>
+.btn-outline-light {
+  background: transparent;
 
-            <h3>Language & Culture</h3>
+  border-color:
+    rgba(250, 249, 245, 0.42);
 
-            <p>
-              Understand not only what Uzbek means, but how it is
-              naturally used in real life.
-            </p>
+  color: var(--ivory);
+}
 
-          </article>
+.btn-outline-light:hover {
+  background: var(--ivory);
+  color: var(--deep-navy);
+}
 
-        </div>
 
-      </div>
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-    </section>
+.menu-toggle {
+  display: none;
 
+  width: 44px;
+  height: 44px;
 
-    <!-- PROGRAMS -->
-    <section class="section-ivory">
+  padding: 8px;
 
-      <div class="container">
+  border: 0;
+  background: transparent;
 
-        <div class="section-heading split-heading reveal">
+  cursor: pointer;
+}
 
-          <div>
-            <p class="eyebrow">
-              Learning Focus
-            </p>
+.menu-toggle span {
+  display: block;
 
-            <h2>
-              Choose where you want to start.
-            </h2>
-          </div>
-[25.08.2026 9:49] -: <p class="lede">
-            Flexible learning options for different goals,
-            interests, and levels.
-          </p>
+  width: 24px;
+  height: 2px;
 
-        </div>
+  margin: 5px auto;
 
+  background: var(--navy);
 
-        <div class="grid grid-3">
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
 
-          <article class="card program-card reveal">
 
-            <span class="tag">01 · Beginner</span>
+/* =========================================================
+   HERO
+   ========================================================= */
 
-            <h3>Uzbek Foundations</h3>
+.hero-home {
+  position: relative;
 
-            <p>
-              Build your first vocabulary, pronunciation,
-              sentence patterns, and essential grammar.
-            </p>
+  overflow: hidden;
 
-            <a href="programs.html" class="link">
-              Explore
-            </a>
+  padding:
+    92px 0 0;
 
-          </article>
+  background: var(--ivory);
+}
 
+.hero-grid {
+  display: grid;
 
-          <article class="card program-card reveal">
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(330px, 0.9fr);
 
-            <span class="tag">02 · Speaking</span>
+  align-items: center;
 
-            <h3>Conversational Uzbek</h3>
+  gap: 70px;
 
-            <p>
-              Develop confidence through practical speaking,
-              listening, and everyday communication.
-            </p>
+  padding-bottom: 90px;
+}
 
-            <a href="programs.html" class="link">
-              Explore
-            </a>
+.hero-content h1 {
+  max-width: 760px;
 
-          </article>
+  margin-bottom: 28px;
 
+  color: var(--deep-navy);
+}
 
-          <article class="card program-card reveal">
+.hero-content h1 span {
+  color: var(--gold);
+}
 
-            <span class="tag">03 · Everyday</span>
+.hero-content .lede {
+  margin-bottom: 0;
 
-            <h3>Uzbek for Life & Travel</h3>
+  color: #52616d;
+}
 
-            <p>
-              Focus on useful Uzbek for travel, family,
-              friendships, culture, and real situations.
-            </p>
+.hero-actions {
+  display: flex;
 
-            <a href="programs.html" class="link">
-              Explore
-            </a>
+  align-items: center;
 
-          </article>
+  gap: 14px;
 
-        </div>
+  flex-wrap: wrap;
 
-      </div>
+  margin-top: 34px;
+}
 
-    </section>
+.hero-note {
+  display: flex;
 
+  align-items: center;
 
-    <!-- HOW IT WORKS -->
-    <section class="section-navy">
+  gap: 9px;
 
-      <div class="container">
+  margin-top: 20px;
 
-        <div class="section-heading centered reveal">
+  color: #697782;
 
-          <p class="eyebrow eyebrow-light">
-            How It Works
-          </p>
+  font-size: 0.84rem;
+}
 
-          <h2 class="heading-light">
-            Simple from day one.
-          </h2>
+.hero-note span {
+  width: 6px;
+  height: 6px;
 
-        </div>
+  border-radius: 50%;
 
+  background: var(--gold);
+}
 
-        <div class="steps-grid">
 
-          <div class="step reveal">
+/* =========================================================
+   HERO CARD
+   ========================================================= */
 
-            <div class="step-number">
-              01
-            </div>
+.hero-card {
+  position: relative;
 
-            <h3>
-              Book a trial lesson
-            </h3>
+  padding: 38px;
 
-            <p>
-              Choose a lesson and take the first step
-              toward learning Uzbek.
-            </p>
+  background: var(--white);
 
-          </div>
+  border:
+    1px solid
+    rgba(15, 48, 72, 0.11);
 
+  border-radius: 22px;
 
-          <div class="step reveal">
+  box-shadow:
+    0 30px 70px -35px
+    rgba(11, 34, 53, 0.32);
+}
 
-            <div class="step-number">
-              02
-            </div>
+.hero-card::before {
+  content: "";
 
-            <h3>
-              Find your learning focus
-            </h3>
+  position: absolute;
 
-            <p>
-              Your lessons can be shaped around your
-              level, goals, and interests.
-            </p>
+  top: -1px;
+  right: 40px;
 
-          </div>
+  width: 72px;
+  height: 3px;
 
+  background: var(--gold);
+}
 
-          <div class="step reveal">
+.hero-card-top {
+  display: flex;
 
-            <div class="step-number">
-              03
-            </div>
+  align-items: center;
 
-            <h3>
-              Start speaking
-            </h3>
+  gap: 14px;
+}
 
-            <p>
-              Practice useful Uzbek and build confidence
-              through real communication.
-            </p>
+.hero-card-top strong {
+  display: block;
 
-          </div>
+  margin-bottom: 3px;
 
-        </div>
+  color: var(--deep-navy);
 
-      </div>
+  font-size: 0.98rem;
+}
 
-    </section>
+.hero-card-top small {
+  display: block;
 
+  color: #71808a;
 
-    <!-- REAL EXPERIENCE -->
-    <section class="section-white">
+  font-size: 0.82rem;
+}
 
-      <div class="container experience-grid">
+.hero-mark {
+  display: flex;
 
-        <div class="experience-intro reveal">
+  align-items: center;
+  justify-content: center;
 
-          <p class="eyebrow">
-            Real Experience
-          </p>
+  width: 50px;
+  height: 50px;
 
-          <h2>
-            Built through real teaching experience.
-          </h2>
+  flex-shrink: 0;
 
-          <p class="lede">
-            Uzbek Pro Academy brings together personalized
-            online language teaching and practical Uzbek learning.
-          </p>
+  border-radius: 50%;
 
-          <a href="about.html" class="btn btn-outline">
-            About the Academy
-          </a>
+  background: var(--soft-gold);
 
-        </div>
+  color: var(--deep-navy);
 
+  font-family: "Fraunces", Georgia, serif;
 
-        <div class="stats-grid">
+  font-weight: 700;
+}
 
-          <div class="stat-card reveal">
-            <strong>150+</strong>
-            <span>Learners taught across online tutoring platforms</span>
-          </div>
+.gold-line {
+  width: 100%;
+  height: 1px;
 
-          <div class="stat-card reveal">
-            <strong>2+</strong>
-            <span>Years of language teaching experience</span>
-          </div>
+  margin: 28px 0;
 
-          <div class="stat-card reveal">
-            <strong>1-on-1</strong>
-            <span>Personalized online learning</span>
-          </div>
-[25.08.2026 9:49] -: <div class="stat-card reveal">
-            <strong>Online</strong>
-            <span>Learn from anywhere in the world</span>
-          </div>
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      rgba(198, 164, 95, 0)
+    );
+}
 
-        </div>
+.feature-list li {
+  display: grid;
 
-      </div>
+  grid-template-columns: 32px 1fr;
 
-    </section>
+  gap: 12px;
 
+  margin-bottom: 22px;
+}
 
-    <!-- YOUTUBE -->
-    <section class="section-ivory">
+.feature-list li:last-child {
+  margin-bottom: 0;
+}
 
-      <div class="container youtube-section">
+.feature-list li > span {
+  color: var(--gold);
 
-        <div class="youtube-copy reveal">
+  font-family: "Fraunces", Georgia, serif;
 
-          <p class="eyebrow">
-            Uzbek Pro Academy
-          </p>
+  font-size: 0.85rem;
+}
 
-          <h2>
-            Learn beyond the lesson.
-          </h2>
+.feature-list strong {
+  display: block;
 
-          <p class="lede">
-            Explore Uzbek language learning content, short lessons,
-            vocabulary, and more on the official YouTube channel.
-          </p>
+  margin-bottom: 3px;
 
-          <a
-            href="https://www.youtube.com/@UzbekProAcademy"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-navy"
-          >
-            Visit YouTube Channel
-          </a>
+  color: var(--deep-navy);
 
-        </div>
+  font-size: 0.94rem;
+}
 
+.feature-list p {
+  margin: 0;
 
-        <div class="youtube-card reveal">
+  color: #687781;
 
-          <div class="youtube-card-inner">
+  font-size: 0.88rem;
 
-            <span class="youtube-label">
-              OFFICIAL CHANNEL
-            </span>
+  line-height: 1.55;
+}
 
-            <div class="youtube-mark">
-              ▶
-            </div>
+.hero-bottom-line {
+  height: 30px;
 
-            <h3>
-              Uzbek Pro Academy
-            </h3>
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 45px,
+      var(--gold) 45px,
+      var(--gold) 46px
+    );
 
-            <p>
-              Uzbek language learning content
-            </p>
+  opacity: 0.16;
+}
 
-            <a
-              href="https://www.youtube.com/@UzbekProAcademy"
-              target="_blank"
-              rel="noopener"
-            >
-              @UzbekProAcademy →
-            </a>
 
-          </div>
+/* =========================================================
+   KEY POINTS
+   ========================================================= */
 
-        </div>
+.key-points-section {
+  padding:
+    0;
 
-      </div>
+  background: var(--white);
 
-    </section>
+  border-bottom:
+    1px solid var(--line);
+}
 
+.key-points {
+  display: grid;
 
-    <!-- FINAL CTA -->
-    <section class="final-cta">
+  grid-template-columns:
+    repeat(4, 1fr);
+}
 
-      <div class="container reveal">
+.key-point {
+  min-height: 140px;
 
-        <p class="eyebrow eyebrow-light centered-eyebrow">
-          Your Uzbek journey starts here
-        </p>
+  display: flex;
 
-        <h2>
-          Ready to start learning Uzbek?
-        </h2>
+  flex-direction: column;
 
-        <p>
-          Take your first step with a personalized trial lesson.
-        </p>
+  justify-content: center;
 
-        <a href="bookings.html" class="btn btn-gold btn-large">
-          Book a Trial — $10
-        </a>
+  align-items: center;
 
-      </div>
+  text-align: center;
 
-    </section>
+  padding: 24px;
 
-  </main>
+  border-right:
+    1px solid var(--line);
+}
 
+.key-point:first-child {
+  border-left:
+    1px solid var(--line);
+}
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+.key-point strong {
+  color: var(--navy);
 
-    <div class="container">
+  font-family: "Fraunces", Georgia, serif;
 
-      <div class="footer-grid">
+  font-size: 1.3rem;
+}
 
-        <div class="footer-main">
+.key-point span {
+  margin-top: 4px;
 
-          <div class="footer-brand">
+  color: #71808a;
 
-            <img
-              src="assets/logo.jpg"
-              alt="Uzbek Pro Academy logo"
-            >
+  font-size: 0.82rem;
+}
 
-            <span class="brand-word footer-brand-name">
-              Uzbek Pro <span>Academy</span>
-            </span>
 
-          </div>
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
 
-          <p>
-            Personalized, practical Uzbek lessons built
-            around your goals.
-          </p>
+.section-heading {
+  margin-bottom: 52px;
+}
 
-          <div class="social-row">
+.section-heading.centered {
+  max-width: 720px;
 
-            <a
-              href="https://www.instagram.com/uzbekproacademy?igsi=d280djU4YWp1NWgx"
-              target="_blank"
-              rel="noopener"
-              aria-label="Instagram"
-            >IG</a>
+  margin-left: auto;
+  margin-right: auto;
 
-            <a
-              href="https://t.me/uzbekproacademy"
-              target="_blank"
-              rel="noopener"
-              aria-label="Telegram"
-            >TG</a>
+  text-align: center;
+}
 
-            <a
-              href="https://youtube.com/@uzbekproacademy?si=Jf03s7uaTS0aejOT"
-              target="_blank"
-              rel="noopener"
-              aria-label="YouTube"
-            >YT</a>
+.section-heading.centered .lede {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-            <a
-              href="https://www.tiktok.com/@uzbek.pro.academy"
-              target="_blank"
-              rel="noopener"
-              aria-label="TikTok"
-            >TT</a>
+.split-heading {
+  display: grid;
 
-            <a
-              href="https://www.facebook.com/share/1C3sgLXTMa/"
-              target="_blank"
-              rel="noopener"
-              aria-label="Facebook"
-            >FB</a>
+  grid-template-columns:
+    1fr 0.75fr;
 
-            <a
-              href="https://x.com/UzbekAcademy"
-              target="_blank"
-              rel="noopener"
-              aria-label="X"
-            >X</a>
+  align-items: end;
 
-            <a
-              href="https://www.linkedin.com/in/odina-bakhramovna-6bb9853a0"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-            >LI</a>
-[25.08.2026 9:49] -: <a
-              href="https://www.xiaohongshu.com/user/profile/6a128911000000000d034c02"
-              target="_blank"
-              rel="noopener"
-              aria-label="Xiaohongshu"
-            >XHS</a>
+  gap: 50px;
+}
 
-          </div>
+.split-heading .lede {
+  margin: 0 0 5px auto;
+}
 
-        </div>
 
+/* =========================================================
+   EYEBROW
+   ========================================================= */
 
-        <div>
-          <h4>Explore</h4>
+.eyebrow {
+  display: inline-flex;
 
-          <a href="programs.html">Programs</a>
-          <a href="videos.html">Videos</a>
-          <a href="blog.html">Blog</a>
-          <a href="portfolio.html">Portfolio</a>
-        </div>
+  align-items: center;
 
+  gap: 10px;
 
-        <div>
-          <h4>Academy</h4>
+  margin-bottom: 16px;
 
-          <a href="about.html">About</a>
-          <a href="events.html">Events</a>
-          <a href="store.html">Store</a>
-          <a href="files.html">Files & Materials</a>
-        </div>
+  color: var(--gold);
 
+  font-size: 0.73rem;
 
-        <div>
-          <h4>Connect</h4>
+  font-weight: 800;
 
-          <a href="contact.html">Contact</a>
-          <a href="chat.html">Chat</a>
-          <a href="bookings.html">Book a Trial</a>
-          <a href="instagram.html">Instagram</a>
-        </div>
+  letter-spacing: 0.16em;
 
-      </div>
+  text-transform: uppercase;
+}
 
+.eyebrow::before {
+  content: "";
 
-      <div class="footer-bottom">
+  width: 24px;
+  height: 1.5px;
 
-        <span>
-          © 2026 Uzbek Pro Academy. All rights reserved.
-        </span>
+  background: var(--gold);
+}
 
-        <span>
-          Made in Uzbekistan · Taught worldwide
-        </span>
+.eyebrow-light {
+  color: var(--soft-gold);
+}
 
-      </div>
+.eyebrow-light::before {
+  background: var(--soft-gold);
+}
 
-    </div>
+.centered-eyebrow {
+  justify-content: center;
+}
 
-  </footer>
 
+/* =========================================================
+   GRIDS
+   ========================================================= */
 
-  <script src="script.js"></script>
+.grid {
+  display: grid;
 
-</body>
-</html>
+  gap: 26px;
+}
+
+.grid-3 {
+  grid-template-columns:
+    repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns:
+    repeat(2, 1fr);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+  background: var(--white);
+
+  border:
+    1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  padding: 34px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(198, 164, 95, 0.45);
+
+  box-shadow: var(--shadow);
+}
+
+.feature-card {
+  min-height: 330px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  background: var(--ivory);
+
+  border:
+    1px solid
+    rgba(198, 164, 95, 0.35);
+
+  border-radius: 50%;
+}
+
+.card-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke: var(--gold);
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card-number {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.card p {
+  color: #667680;
+
+  font-size: 0.94rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROGRAM CARDS
+   ========================================================= */
+
+.program-card {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.program-card h3 {
+  margin-top: 18px;
+}
+
+.program-card p {
+  flex: 1;
+}
+
+.tag {
+  color: var(--gold);
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  color: var(--navy);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+.link::after {
+  content: "→";
+
+  transition:
+    transform 0.2s ease;
+}
+
+.link:hover::after {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   NAVY SECTION
+   ========================================================= */
+
+.section-navy {
+  background: var(--navy);
+
+  color: var(--ivory);
+}
+
+.heading-light {
+  color: var(--ivory);
+}
+
+.steps-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 45px;
+}
+
+.step {
+  text-align: center;
+
+  padding:
+    10px 25px;
+}
+
+.step-number {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    0 auto 22px;
+
+  border:
+    1px solid var(--gold);
+
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 1rem;
+}
+
+.step h3 {
+  color: var(--ivory);
+}
+
+.step p {
+  max-width: 31ch;
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(250, 249, 245, 0.68);
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   EXPERIENCE / STATS
+   ========================================================= */
+
+.experience-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.experience-intro .btn {
+  margin-top: 15px;
+}
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 32px;
+
+  background: var(--ivory);
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 16px;
+}
+
+.stat-card strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 2rem;
+}
+
+.stat-card span {
+  display: block;
+
+  color: #64737d;
+
+  font-size: 0.86rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   YOUTUBE
+   ========================================================= */
+
+.youtube-section {
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.85fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.youtube-card {
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: var(--deep-navy);
+
+  border-radius: 22px;
+
+  box-shadow:
+    var(--shadow);
+
+  text-align: center;
+}
+
+.youtube-card-inner {
+  width: 100%;
+}
+
+.youtube-label {
+  color: var(--soft-gold);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.youtube-mark {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    22px auto;
+
+  border:
+    1px solid var(--gold);
+
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  font-size: 1.25rem;
+}
+
+.youtube-card h3 {
+  color: var(--ivory);
+}
+
+.youtube-card p {
+  color:
+    rgba(250, 249, 245, 0.62);
+}
+
+.youtube-card a {
+  color: var(--gold);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.final-cta {
+  padding:
+    100px 0;
+
+  background: var(--deep-navy);
+
+  color: var(--ivory);
+
+  text-align: center;
+}
+
+.final-cta h2 {
+  color: var(--ivory);
+
+  max-width: 720px;
+
+  margin:
+    0 auto 16px;
+}
+
+.final-cta p:not(.eyebrow) {
+  max-width: 520px;
+
+  margin:
+    0 auto 30px;
+
+  color:
+    rgba(250, 249, 245, 0.7);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding:
+    68px 0 28px;
+
+  background: var(--deep-navy);
+
+  color:
+    rgba(250, 249, 245, 0.72);
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr;
+
+  gap: 42px;
+}
+
+.footer-main > p {
+  max-width: 34ch;
+
+  font-size: 0.9rem;
+
+  color:
+    rgba(250, 249, 245, 0.62);
+}
+
+.footer-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+.footer-brand img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.footer-brand-name {
+  color: var(--ivory);
+}
+
+.site-footer h4 {
+  margin-bottom: 18px;
+
+  color: var(--ivory);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.site-footer .footer-grid > div:not(.footer-main) a {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color:
+    rgba(250, 249, 245, 0.66);
+
+  font-size: 0.88rem;
+
+  transition:
+    color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: var(--gold) !important;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.social-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.social-row a {
+  min-width: 34px;
+  height: 34px;
+
+  display: flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid
+    rgba(250, 249, 245, 0.16);
+
+  border-radius: 999px;
+
+  color:
+    rgba(250, 249, 245, 0.68) !important;
+
+  font-size: 0.65rem !important;
+
+  font-weight: 800;
+}
+
+.social-row a:hover {
+  border-color: var(--gold);
+
+  background:
+    rgba(198, 164, 95, 0.1);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  margin-top: 52px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid
+    rgba(250, 249, 245, 0.13);
+
+  color:
+    rgba(250, 249, 245, 0.45);
+
+  font-size: 0.76rem;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(18px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .main-nav ul {
+    gap: 17px;
+  }
+
+  .main-nav a {
+    font-size: 0.8rem;
+  }
+
+  .hero-grid {
+    gap: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+@media (max-width: 920px) {
+
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+
+    top: 78px;
+    right: 0;
+    bottom: 0;
+
+    width: min(360px, 88vw);
+
+    padding: 35px 28px;
+
+    background: var(--ivory);
+
+    border-left:
+      1px solid var(--line);
+
+    box-shadow:
+      -20px 0 50px -35px
+      rgba(11, 34, 53, 0.35);
+
+    transform:
+      translateX(110%);
+
+    transition:
+      transform 0.3s ease;
+  }
+
+  .main-nav.open {
+    transform:
+      translateX(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  .main-nav a {
+    font-size: 1rem;
+  }
+
+  .nav-cta-mobile {
+    display: block;
+
+    padding-top: 8px;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform:
+      translateY(7px)
+      rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform:
+      translateY(-7px)
+      rotate(-45deg);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 860px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content .eyebrow {
+    justify-content: center;
+  }
+
+  .hero-content .lede {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-note {
+    justify-content: center;
+  }
+
+  .key-points {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .key-point:nth-child(3) {
+    border-left: 1px solid var(--line);
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .split-heading {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .split-heading .lede {
+    margin: 0;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .youtube-section {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .topbar {
+    font-size: 0.68rem;
+
+    padding:
+      7px 14px;
+  }
+
+  .nav-row {
+    min-height: 70px;
+  }
+
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-word {
+    font-size: 1rem;
+  }
+
+  .main-nav {
+    top: 70px;
+  }
+
+  .hero-home {
+    padding-top: 65px;
+  }
+
+  .hero-grid {
+    padding-bottom: 65px;
+  }
+
+  h1 {
+    font-size:
+      clamp(2.7rem, 13vw, 4rem);
+  }
+
+  h2 {
+    font-size:
+      clamp(2rem, 10vw, 2.7rem);
+  }
+
+  .hero-content h1 {
+    margin-bottom: 22px;
+  }
+
+  .hero-content .lede {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-card {
+    padding: 28px;
+  }
+
+  .key-points {
+    grid-template-columns: 1fr;
+  }
+
+  .key-point {
+    min-height: 115px;
+
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .key-point:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .card {
+    padding: 28px;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 27px;
+  }
+
+  .youtube-card {
+    min-height: 280px;
+
+    padding: 30px;
+  }
+
+  .final-cta {
+    padding:
+      75px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 38px 24px;
+  }
+
+  .footer-main {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .container {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .brand-word {
+    font-size: 0.92rem;
+  }
+
+  .hero-card {
+    padding: 23px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
